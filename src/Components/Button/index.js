@@ -1,9 +1,12 @@
 import React from "react";
-import "./style.css";
+
 
 function Button() {
-    <button className="btn"> I AM A BUTTON
-    </button>
+    return (
+        <div className="btn btn-primary" id="button">
+        Hello
+        </div>
+    )
 }
 
 export default Button;
