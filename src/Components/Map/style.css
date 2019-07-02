@@ -4,8 +4,12 @@
         width:100%;
         z-index: -9999
       }
-
+.navPackage{
+  display: flex;
+  justify-content: center;
+}
       .greenBanner{
+        top:0;
         position:absolute;
         width: 100vw;
         height: auto;
@@ -15,7 +19,6 @@
       h1{
         position: absolute;
         z-index: 2;
-        padding-left: 32px;
-        padding-top: 15px;
         color: #0A2463;
+        padding-top: 25px;
       }
