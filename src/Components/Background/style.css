@@ -1,0 +1,21 @@
+.greenBg{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* .background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  */
+/* }  */
+
+.barhop{
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 80px;
+  width: 100px;
+  height: auto;
+}

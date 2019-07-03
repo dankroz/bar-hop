@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import Jumbotron from "../Components/Jumbotron";
-import Button from "../Components/Button";
+import barhopLogo from "../Components/Desktop/barhopLogo.png";
+import "../Components/Background/style.css";
+import greenBg from "../Components/Background/green-bg.png"
 
 
 class Home extends Component {
 
     render() {
         return (
-            
         <div>
-            <Jumbotron />
-            <Button />
+            <div className="background">
+                <div className="flex">
+                        <img className="greenBg" src={greenBg} alt={"greenBg"} />
+                    </div>
+                <img className="barhop" src={barhopLogo} alt={"logo"} />
+            </div>
         </div>
         )
     }
