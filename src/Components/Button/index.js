@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 
-function Button() {
+function Button({ children }) {
     return (
         <div className="btn-flex">
-            <div className="btn btn-primary" id="button">
-                Hello
+            <div className="btn btn-primary whiteBtn" id="button">
+                { children }
             </div>
         </div>
 
