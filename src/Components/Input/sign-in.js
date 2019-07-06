@@ -23,7 +23,7 @@ function UserSignIn() {
                         <div className="btn btn-primary" id="button">Sign in</div>
                     </div>
                     <div className="col-md-12 mt-2 d-flex mx-auto justify-content-center">
-                        <div className="noAccount">Don't have an account? <a href="/" class="signUp">Sign Up</a></div>
+                        <div className="noAccount signUp">Don't have an account? <a href="/">Sign Up</a></div>
                     </div>
                 </div>
 
