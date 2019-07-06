@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import SimpleMap from "../Components/Map/map";
 import "../Components/Map/style.css";
-import navImg from "../Components/Map/greenBanner.png"
+import navImg from "../Components/Banner/greenBanner.png"
+import Button from "../Components/Button"
+import "../Components/Button/style.css";
 
 class Maps extends Component {
     render() {
@@ -12,6 +14,7 @@ class Maps extends Component {
                     <img className="greenBanner" src={navImg} alt={"nav"} />
                 </div>
                 <SimpleMap />
+                <Button/>
             </div>
         );
     }

@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Desktop from "./Components/Desktop/index";
 // import Maps from "./Components/Map/index";
-// import Map from "./Pages/maps"
+// import Maps from "./Pages/maps"
 // import Home from "./Pages/home"
 import SignIn from './Pages/signin';
 
