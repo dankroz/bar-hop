@@ -12,7 +12,6 @@ import PicPage from "./Pages/picpage";
 import Leaderboard from "./Pages/Leaderboard";
 import NoMatch from "./Pages/NoMatch";
 
-
 function App() {
   return (
     <>
