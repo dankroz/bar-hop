@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import greenBg from "../Components/Background/green-bg.png"
 import "../Components/Background/style.css";
-import UserSignUp from "../Components/SignUp";
 
 
-class SignUp extends Component {
+
+class Arrived extends Component {
 
     render() {
         return (
             <div>
                 <div className="background">
-                    <UserSignUp/>
+                    <h1>You've Arrived!</h1>
                     <img className="greenBg" src={greenBg} alt={"greenBg"} />
                 </div>
             </div>
@@ -19,4 +19,4 @@ class SignUp extends Component {
 
 }
 
-export default SignUp;
+export default Arrived;
