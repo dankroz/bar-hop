@@ -1,16 +1,6 @@
-.btn-flex{
-   position: absolute;
-   height: 100vh;
-   width: 100vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   top: 0;
-
-}
 
 .whiteBtn {
-   position: absolute;
+   position: fixed;
    bottom: 0;
    margin-bottom: 40px !important;
    background-color: white;
