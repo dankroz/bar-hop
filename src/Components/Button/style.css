@@ -9,12 +9,12 @@
 
 }
 
-#button {
+.whiteBtn {
    position: absolute;
    bottom: 0;
-   margin-bottom: 150px;
+   margin-bottom: 40px !important;
    background-color: white;
    color: #0A2463;
    border-radius: 35px;
-   width: 200px;
+   width: 200px !important;
 }
