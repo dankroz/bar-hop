@@ -1,0 +1,22 @@
+import React, { Component } from "react";
+import greenBg from "../Components/Background/green-bg.png"
+import "../Components/Background/style.css";
+import UserSignIn from "../Components/Input/sign-in";
+
+
+class SignIn extends Component {
+
+    render() {
+        return (
+            <div>
+                <div className="background">
+                    <UserSignIn/>
+                    <img className="greenBg" src={greenBg} alt={"greenBg"} />
+                </div>
+            </div>
+        )
+    }
+
+}
+
+export default SignIn;
