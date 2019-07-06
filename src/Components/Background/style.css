@@ -1,16 +1,25 @@
 .greenBg{
     width: 100vw;
     height: 100vh;
+    max-width: 100% !important;
+    min-width: 100% !important; 
+    max-height: 100vh !important;
+    min-height: 100vh !important;
+    /* width: 100% !important; */
+    overflow: hidden !important;
+    overflow-y: auto !important;
 }
 
-/* .background{
-    display: flex;
+.background{
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    /* background-position: center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;  */
-/* }  */
+    background-size: cover; 
+    overflow-x: hidden; */
+
+ } 
 
 .barhop{
   position: absolute;
