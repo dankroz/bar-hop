@@ -20,7 +20,7 @@ function UserSignUp() {
           <div className="col-md-12 pb-2 d-flex mx-auto justify-content-center">
             <input placeholder="Password" />
           </div>
-          <div className="col-md-12 pt-2 d-flex mx-auto justify-content-center">
+          <div className="col-md-12 d-flex mx-auto justify-content-center">
             <div className="btn btn-primary" id="button">
               Sign Up
             </div>
