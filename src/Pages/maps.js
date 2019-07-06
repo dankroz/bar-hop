@@ -14,7 +14,9 @@ class Maps extends Component {
                     <img className="greenBanner" src={navImg} alt={"nav"} />
                 </div>
                 <SimpleMap />
-                <Button/>
+                <Button>
+                    Check Progress
+                </Button>
             </div>
         );
     }
