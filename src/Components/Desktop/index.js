@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import barhopLogo from "./barhopLogo.png"
 
-class Desktop extends Component {
+class Home extends Component {
     render() {
         return (
             <div className="landing">
@@ -14,4 +14,4 @@ class Desktop extends Component {
     }
 }
 
-export default Desktop;
+export default Home;
