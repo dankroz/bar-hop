@@ -1,15 +1,17 @@
 import React from "react";
-import "./style.css";
+import "./signinbtn.css";
 
-function Button(props) {
+function SignInBtn(props) {
 
   return (
+    <>
     <div className="d-flex mx-auto justify-content-center">
-        <button {...props} className="btn whiteBtn" id="button">
+        <button {...props} className="btn signInBtn" id="button">
             {props.children}
         </button>
     </div>
+    </>
   );
 }
 
-export default Button;
+export default SignInBtn;

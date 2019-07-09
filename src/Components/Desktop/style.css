@@ -1,5 +1,5 @@
 .img-container{
-    background-image: url("desktop-green-bg.png");
+    background-image: url("../Background/green-bg.png");
     background-attachment: fixed;
     min-height: 650px;
     width: 100vw;

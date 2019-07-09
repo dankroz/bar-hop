@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import greenBg from "../Components/Background/green-bg.png"
 import "../Components/Background/style.css";
-import Button from "../Components/Button"
+import SignInBtn from "../Components/Button/SignInBtn"
 import TextArea from "../Components/TextArea"
-import "../Components/Flexbox/flexbox.css";
-import {Facebook} from "../Components/Input/sign-in";
+import {Facebook, Title} from "../Components/SignIn/sign-in";
+
 
 
 class Signin extends Component {
@@ -15,7 +14,9 @@ class Signin extends Component {
     render() {
         return (
             <>
-                <div className="flexbox">
+            <Title>
+                Sign In
+            </Title>
                 <TextArea 
                     placeholder="Email"
                 >
@@ -23,14 +24,12 @@ class Signin extends Component {
                 <TextArea 
                     placeholder="Password"
                 >
-                </TextArea>
-                </div>                
-                <Button onClick={this.clicked1}>
+                </TextArea>              
+                <SignInBtn onClick={this.clicked1}>
                     Sign In
-                </Button>
-                <Facebook/>
-                <img className="greenBg" src={greenBg} alt={"greenBg"} />
-                
+                </SignInBtn>
+                <p className="text-center pt-2">Don't have an account? <a className="" href="/signup"><u>Sign Up</u></a></p>
+                <Facebook>Sign in</Facebook>
             </>
         )
     }
