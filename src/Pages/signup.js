@@ -1,17 +1,37 @@
 import React, { Component } from "react";
 import "../Components/Background/style.css";
-import UserSignUp from "../Components/SignUp";
+import Button from "../Components/Button"
+import TextArea from "../Components/TextArea"
+import "../Components/Flexbox/flexbox.css";
+import {Facebook} from "../Components/Input/sign-in";
+
 
 
 class SignUp extends Component {
-
+    clicked1 = event => {
+        event.preventDefault();
+        console.log("hello");
+    }
     render() {
         return (
-            <div>
-                <div className="background">
-                    <UserSignUp/>
-                </div>
-            </div>
+            <>
+                <TextArea 
+                    placeholder="Username"
+                >
+                </TextArea>
+                <TextArea 
+                    placeholder="Email"
+                >
+                </TextArea>
+                <TextArea 
+                    placeholder="Password"
+                >
+                </TextArea>              
+                <Button onClick={this.clicked1}>
+                    Sign In
+                </Button>
+                <Facebook/>
+            </>
         )
     }
 
