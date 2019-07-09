@@ -1,17 +1,11 @@
-/* .greenBg{
-    width: 100vw;
-    height: 100vh;
-    max-width: 100% !important;
-    min-width: 100% !important; 
-    max-height: 100vh !important;
-    min-height: 100vh !important;
-    width: 100% !important;
-    overflow: hidden !important;
-    overflow-y: auto !important;
-} */
-
 body {
   background-image: url("green-bg.png");
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
 }
 
 .barhop{
