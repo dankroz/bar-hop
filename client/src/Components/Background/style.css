@@ -7,11 +7,3 @@ body {
   background-repeat: no-repeat;
   background-size: cover
 }
-
-.barhop{
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 80px;
-  width: 100px;
-  height: auto;
-}
