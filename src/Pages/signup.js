@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import greenBg from "../Components/Background/green-bg.png"
 import "../Components/Background/style.css";
 import UserSignUp from "../Components/SignUp";
 
@@ -11,7 +10,6 @@ class SignUp extends Component {
             <div>
                 <div className="background">
                     <UserSignUp/>
-                    <img className="greenBg" src={greenBg} alt={"greenBg"} />
                 </div>
             </div>
         )

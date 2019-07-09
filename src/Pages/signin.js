@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import greenBg from "../Components/Background/green-bg.png"
 import "../Components/Background/style.css";
 import Button from "../Components/Button"
 import TextArea from "../Components/TextArea"
 import "../Components/Flexbox/flexbox.css";
 import {Facebook} from "../Components/Input/sign-in";
+
 
 
 class Signin extends Component {
@@ -15,7 +15,6 @@ class Signin extends Component {
     render() {
         return (
             <>
-                <div className="flexbox">
                 <TextArea 
                     placeholder="Email"
                 >
@@ -23,14 +22,11 @@ class Signin extends Component {
                 <TextArea 
                     placeholder="Password"
                 >
-                </TextArea>
-                </div>                
+                </TextArea>              
                 <Button onClick={this.clicked1}>
                     Sign In
                 </Button>
                 <Facebook/>
-                <img className="greenBg" src={greenBg} alt={"greenBg"} />
-                
             </>
         )
     }
