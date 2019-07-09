@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import greenBg from "../Components/Background/green-bg.png"
 import "../Components/Background/style.css";
 
 
@@ -12,8 +11,6 @@ class ExtraHelp extends Component {
                 <div className="background">
                     
                         <h1>This is where the extra hints will be placed</h1>
-                    
-                    <img className="greenBg" src={greenBg} alt={"greenBg"} />
                 </div>
             </div>
         )
