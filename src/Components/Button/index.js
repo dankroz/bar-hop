@@ -4,7 +4,7 @@ import "./style.css";
 function Button(props) {
 
   return (
-    <div className="flexbox">
+    <div className="d-flex mx-auto justify-content-center">
         <button {...props} className="btn whiteBtn" id="button">
             {props.children}
         </button>

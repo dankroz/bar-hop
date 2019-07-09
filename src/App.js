@@ -11,6 +11,7 @@ import BarDetails from "./Pages/bardetails";
 import PicPage from "./Pages/picpage";
 import Leaderboard from "./Pages/Leaderboard";
 import NoMatch from "./Pages/NoMatch";
+import Home from "./Pages/home";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <div>
             {/* <Nav /> */}
             <Switch>
-              <Route exact path="/" component={Signin} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/map" component={Maps} />

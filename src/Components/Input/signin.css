@@ -1,11 +1,3 @@
-.flexbox{
-   height: 100vh;
-   width: 100vw;
-   display: flex;
-   justify-content: center;
-   padding-top: 0px !important;
-}
-
 .row{
    top: 0;
 }

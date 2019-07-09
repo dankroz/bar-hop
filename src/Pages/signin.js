@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../Components/Background/style.css";
 import Button from "../Components/Button"
 import TextArea from "../Components/TextArea"
-import "../Components/Flexbox/flexbox.css";
 import {Facebook} from "../Components/Input/sign-in";
 
 

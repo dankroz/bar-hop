@@ -7,7 +7,7 @@ import googlePlus from "./Google-Plus.png"
 
 export function UserSignIn() {
     return (
-        <div className="flexbox">
+        <div>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 mb-5 pb-5 d-flex mx-auto justify-content-center">
@@ -35,8 +35,8 @@ export function UserSignIn() {
 
 export function Facebook() {
     return (
-        <div className="flexbox">
-            <div className="row">
+        <div>
+            <div className="row d-flex mx-auto justify-content-center">
                 <a href="/"><img className="facebook icon col-md-6" src={facebook} alt={"facebook"} /></a>
                 <a href="/"><img className="google icon col-md-6" src={googlePlus} alt={"google"} /></a>
             </div>
