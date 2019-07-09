@@ -5,7 +5,7 @@ import Desktop from "./Components/Desktop/index";
 import Arrived from "./Pages/arrived";
 import Maps from "./Pages/maps";
 import ExtraHelp from "./Pages/extrahelp";
-import SignIn from "./Pages/signin";
+import Signin from "./Pages/signin";
 import SignUp from "./Pages/signup";
 import BarDetails from "./Pages/bardetails";
 import PicPage from "./Pages/picpage";
@@ -23,8 +23,8 @@ function App() {
           <div>
             {/* <Nav /> */}
             <Switch>
-              <Route exact path="/" component={SignIn} />
-              <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/" component={Signin} />
+              <Route exact path="/signin" component={Signin} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/map" component={Maps} />
               <Route exact path="/help" component={ExtraHelp} />

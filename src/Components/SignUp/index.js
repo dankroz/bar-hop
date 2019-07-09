@@ -5,7 +5,7 @@ import googlePlus from "../Input/Google-Plus.png";
 
 function UserSignUp() {
   return (
-    <div className="btn-flex">
+    <div className="flexbox">
       <div className="container">
         <div className="row">
           <div id="header" className="col-md-12 pb-2 d-flex mx-auto justify-content-center">

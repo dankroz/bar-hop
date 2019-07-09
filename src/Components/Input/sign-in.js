@@ -4,9 +4,10 @@ import facebook from "./Facebook.png"
 import googlePlus from "./Google-Plus.png"
 
 
-function UserSignIn() {
+
+export function UserSignIn() {
     return (
-        <div className="btn-flex">
+        <div className="flexbox">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 mb-5 pb-5 d-flex mx-auto justify-content-center">
@@ -19,26 +20,29 @@ function UserSignIn() {
                         <input placeholder="Password"></input>
                     </div>
 
-                    <div className="col-md-12 d-flex mx-auto justify-content-center">
+                    {/* <Button className="col-md-12 d-flex mx-auto justify-content-center">
                         <div className="btn btn-primary" id="button">Sign in</div>
-                    </div>
-                    <div className="col-md-12 mt-2 d-flex mx-auto justify-content-center">
-                        <div className="noAccount signUp">Don't have an account? <a href="/">Sign Up</a></div>
-                    </div>
+                    </Button>
+                    <Button className="col-md-12 mt-2 d-flex mx-auto justify-content-center">
+                        <div className="noAccount signUp">Don't have an account? <a href="/signup">Sign Up</a></div>
+                    </Button> */}
                 </div>
-
-                <div className="d-flex mx-auto justify-content-center pt-5 pb-3 mt-5">Login with Facebook or Google</div>
-                <div className="container-fluid d-flex mx-auto justify-content-center">
-                    <div className="row">
-                        <a href="/"><img className="facebook icon col-md-6" src={facebook} alt={"facebook"} /></a>
-                        <a href="/"><img className="google icon col-md-6" src={googlePlus} alt={"google"} /></a>
-                    </div>
                 </div>
+        </div>
 
+    )
+}
+
+export function Facebook() {
+    return (
+        <div className="flexbox">
+            <div className="row">
+                <a href="/"><img className="facebook icon col-md-6" src={facebook} alt={"facebook"} /></a>
+                <a href="/"><img className="google icon col-md-6" src={googlePlus} alt={"google"} /></a>
             </div>
         </div>
 
     )
 }
 
-export default UserSignIn;
+// export default UserSignIn;
