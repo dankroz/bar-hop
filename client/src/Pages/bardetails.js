@@ -8,7 +8,7 @@ class BarDetails extends Component {
     render() {
         return (
             <div>
-                <div className="background">
+                <div>
                     <h1>Bar Details Go Here</h1>
                 </div>
             </div>

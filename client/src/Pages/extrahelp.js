@@ -8,8 +8,7 @@ class ExtraHelp extends Component {
     render() {
         return (
             <div>
-                <div className="background">
-                    
+                <div>
                         <h1>This is where the extra hints will be placed</h1>
                 </div>
             </div>
