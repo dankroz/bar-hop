@@ -1,0 +1,16 @@
+textarea {
+    border-radius: 35px;
+    height: 40px;
+    width: 210px;
+    outline: 0px solid white;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+::placeholder { 
+    color: rgb(2, 22, 68);
+    opacity: .5; 
+    text-align:center;
+  }
