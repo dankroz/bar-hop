@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "../Components/Background/style.css";
-import Button from "../Components/Button"
+import SignInBtn from "../Components/Button/SignInBtn"
 import TextArea from "../Components/TextArea"
-import {Facebook} from "../Components/Input/sign-in";
+import {Facebook, Title} from "../Components/SignIn/sign-in";
 
 
 
@@ -14,6 +14,9 @@ class Signin extends Component {
     render() {
         return (
             <>
+            <Title>
+                Sign In
+            </Title>
                 <TextArea 
                     placeholder="Email"
                 >
@@ -22,10 +25,11 @@ class Signin extends Component {
                     placeholder="Password"
                 >
                 </TextArea>              
-                <Button onClick={this.clicked1}>
+                <SignInBtn onClick={this.clicked1}>
                     Sign In
-                </Button>
-                <Facebook/>
+                </SignInBtn>
+                <p className="text-center pt-2">Don't have an account? <a className="" href="/signup"><u>Sign Up</u></a></p>
+                <Facebook>Sign in</Facebook>
             </>
         )
     }

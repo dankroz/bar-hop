@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import facebook from "../Input/Facebook.png";
-import googlePlus from "../Input/Google-Plus.png";
+import facebook from "../SignIn/Facebook.png";
+import googlePlus from "../SignIn/Google-Plus.png";
 
 function UserSignUp() {
   return (

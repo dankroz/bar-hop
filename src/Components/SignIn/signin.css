@@ -2,6 +2,13 @@
    top: 0;
 }
 
+.margin{
+   margin-top: 120px;
+}
+
+.fbMargin{
+   margin-top: 115px;
+}
 #button {
    /* position: absolute; */
    background-color: white;
