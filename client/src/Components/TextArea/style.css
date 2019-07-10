@@ -1,0 +1,31 @@
+textarea {
+    border-radius: 35px;
+    height: 40px;
+    line-height: 35px;
+    width: 210px;
+    outline: 0px solid white;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    border: none;
+    -moz-box-sizing:content-box;
+        -webkit-box-sizing:content-box;
+        border:#fff solid .2px;
+        box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.123);
+}
+
+::placeholder { 
+    color: rgb(2, 22, 68);
+    opacity: 1; 
+    text-align:center;
+  }
+
+textarea,
+[contenteditable] {
+  color: #666;
+  caret-color: #0A2463;
+  font-size: 16px;
+}

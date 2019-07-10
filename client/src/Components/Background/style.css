@@ -1,0 +1,9 @@
+body {
+  background-image: url("green-bg.png");
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
+}

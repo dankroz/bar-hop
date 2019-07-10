@@ -1,0 +1,38 @@
+
+#button {
+  background-color: white;
+  color: #0a2463;
+  border-radius: 35px;
+  width: 140px;
+  margin-bottom: 0px;
+  margin-top:25px !important;
+}
+
+input {
+  border-radius: 35px;
+  height: 40px;
+  width: 210px;
+  outline: 0px solid white;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+::placeholder {
+  color: rgb(2, 22, 68);
+  opacity: 0.5;
+  text-align: center;
+}
+
+.icon {
+  width: 70px;
+  height: 40px;
+}
+
+.signUp {
+  text-decoration: underline;
+  color: rgb(53, 53, 53);
+}
+
+#header {
+    margin-bottom: 75px;
+}
