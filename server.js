@@ -22,3 +22,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/barhop");
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
+
+
+
+
+
