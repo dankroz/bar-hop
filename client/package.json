@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "main": "index.js",
-  
+  "proxy": "http://localhost:3001/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
