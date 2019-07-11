@@ -12,7 +12,6 @@ import PicPage from "./Pages/picpage";
 import Leaderboard from "./Pages/Leaderboard";
 import NoMatch from "./Pages/NoMatch";
 import Home from "./Pages/home";
-import NewBar from "./Pages/addbar";
 
 function App() {
   return (
@@ -34,7 +33,6 @@ function App() {
               <Route exact path="/bardetails" component={BarDetails} />
               <Route exact path="/picpage" component={PicPage} />
               <Route exact path="/leaderboard" component={Leaderboard} />
-              <Route exact path="/addbar" component={NewBar} />
               <Route component={NoMatch} />
             </Switch>
           </div>
