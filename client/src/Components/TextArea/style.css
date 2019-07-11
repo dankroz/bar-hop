@@ -26,6 +26,6 @@ textarea {
 textarea,
 [contenteditable] {
   color: #666;
-  caret-color: #0A2463;
+  caret-color: rgba(10, 37, 99, 0.658);
   font-size: 16px;
 }

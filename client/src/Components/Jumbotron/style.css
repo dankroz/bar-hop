@@ -1,0 +1,13 @@
+.centeredDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron{
+    margin-top: 70px;
+    width: 80vw;
+    overflow-y: scroll;
+    overflow-x: none;
+    height: 350px;
+}
