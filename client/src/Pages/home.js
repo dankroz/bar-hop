@@ -1,17 +1,25 @@
 import React, { Component } from "react";
-import barhopLogo from "../Components/Desktop/barhopLogo.png";
 import "../Components/Background/style.css";
+import Button from "../Components/Button"
 
+const background = {
+    backgroundColor: "#0A2463",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100vh"
+}
 
 class Home extends Component {
 
     render() {
         return (
-        <div>
-            <div className="d-flex mx-auto justify-content-center">
-                <img className="barhop" src={barhopLogo} alt={"logo"} />
-            </div>
-        </div>
+        <div style={background}>
+            <Button onClick={this.clicked}>
+            Start Bar Hop
+            </Button>
+         </div>
         )
     }
 

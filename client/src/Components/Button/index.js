@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Button(props) {
+export function Button(props) {
 
   return (
     <div className="d-flex mx-auto justify-content-center">
@@ -13,3 +13,5 @@ function Button(props) {
 }
 
 export default Button;
+
+
