@@ -3,6 +3,7 @@ import SimpleMap from "../Components/Map/map";
 import "../Components/Map/style.css";
 import GreenBanner from "../Components/Banner/index.js";
 import Button from "../Components/Button"
+import SmallBtn from "../Components/Button/SmallBtn"
 
 class Maps extends Component {
     clicked = event => {
@@ -12,6 +13,9 @@ class Maps extends Component {
     render() {
         return (
             <div className="global">
+                <SmallBtn>
+                    ?
+                </SmallBtn>
                 <GreenBanner>HINT GOES HERE </GreenBanner>
                 <SimpleMap />
                 <Button onClick={this.clicked}>
