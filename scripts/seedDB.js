@@ -45,16 +45,7 @@ const barSeed = [
     hint1: "The bar is named after a founding father who made his key discovery using a kite",
     hint2: "This speakeasy has a name that is synonymous with a local Philly museaum",
     image: "https://cdn.vox-cdn.com/thumbor/3Whiy5GiA-zisnM2Yah4neYwjjM=/11x0:736x544/1200x800/filters:focal(11x0:736x544)/cdn.vox-cdn.com/uploads/chorus_image/image/50209745/1932362_109871969373282_3251139940362004347_n.0.0.jpg"
-  },
-  {
-    name: "Misconduct",
-    latitude: 39.948580,
-    longtitude: -75.166650,
-    type: "sports",
-    hint1: 
-    hint2:
-    image:
-  },
+  }
 ];
 
 db.Bar
