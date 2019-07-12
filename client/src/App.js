@@ -12,6 +12,7 @@ import PicPage from "./Pages/picpage";
 import Leaderboard from "./Pages/Leaderboard";
 import NoMatch from "./Pages/NoMatch";
 import Home from "./Pages/home";
+import IdentifiedPic from "./Pages/identifiedPic";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route exact path="/arrived" component={Arrived} />
               <Route exact path="/bardetails" component={BarDetails} />
               <Route exact path="/picpage" component={PicPage} />
+              <Route exact path="/identified" component={IdentifiedPic} />
               <Route exact path="/leaderboard" component={Leaderboard} />
               <Route component={NoMatch} />
             </Switch>
