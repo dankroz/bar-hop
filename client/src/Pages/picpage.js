@@ -57,19 +57,20 @@ class PicPage extends Component {
 
   render() {
     const videoConstraints = {
-      width: 750,
-      height: 1500,
+      // width: 750,
+      // height: 1500,
       facingMode: "environment"
     };
 
     return (
       <div>
         <Webcam
+          className="webcam"
           audio={false}
-          height={384}
+          // height={350}
           ref={this.setRef}
           screenshotFormat="image/jpeg"
-          width={400}
+          // width={350}
           videoConstraints={videoConstraints}
         />
         <Button onClick={this.capture}>Take Picture</Button>
