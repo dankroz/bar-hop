@@ -35,7 +35,7 @@ const barSeed = [
     type: "Pub",
     hint1: "This bars name is similar to the feeling after finishing your third shot",
     hint2: "The location of this bistro is a block away from one of the city's best spots for live music",
-    image:"https://www.phillymag.com/wp-content/uploads/sites/3/2018/03/tipsy-bistro-exterior-Facebook-900x600.jpg"
+    image: "https://www.phillymag.com/wp-content/uploads/sites/3/2018/03/tipsy-bistro-exterior-Facebook-900x600.jpg"
   },
   {
     name: "The Franklin Bar",
