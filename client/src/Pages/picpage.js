@@ -57,8 +57,8 @@ class PicPage extends Component {
 
   render() {
     const videoConstraints = {
-      // width: 750,
-      // height: 1500,
+      width: 750,
+      height: 1500,
       facingMode: "environment"
     };
 
@@ -70,7 +70,7 @@ class PicPage extends Component {
           // height={350}
           ref={this.setRef}
           screenshotFormat="image/jpeg"
-          // width={350}
+          // width={355}
           videoConstraints={videoConstraints}
         />
         <Button onClick={this.capture}>Take Picture</Button>

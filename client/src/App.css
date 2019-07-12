@@ -15,7 +15,7 @@
   }
   .webcam {
     width: 100vw;
-    height: 41vh;
+    height: auto;
     overflow: hidden;
   }
 }
