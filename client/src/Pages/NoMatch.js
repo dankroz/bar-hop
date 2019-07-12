@@ -14,8 +14,8 @@ render(){
           <div className="pt-5 pl-3 pr-1" style={{ color: "#0A2463" }}>
             <p>
               <span role="img" aria-label="Face With Rolling Eyes Emoji" style={{fontSize: "48px" }}>
-                🙄 🍻
-                </span>
+                🙄
+              </span>
             </p>
             <h1>Sorry! this is not a "enter prop here from pic data"</h1>
             <h1>Try out the next challenge by clicking next challenge</h1>
