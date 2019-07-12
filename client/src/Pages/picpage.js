@@ -59,7 +59,7 @@ class PicPage extends Component {
     const videoConstraints = {
       width: 750,
       height: 1500,
-      facingMode: "user"
+      facingMode: "environment"
     };
 
     return (
