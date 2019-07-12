@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Container } from "../Components/Grid";
+import Button from "../Components/Button"
 
 function NoMatch() {
   return (
@@ -13,7 +14,7 @@ function NoMatch() {
                 🙄
               </span>
             </p>
-          
+            <Button>Hello</Button>    
         </Col>
       </Row>
     </Container>
