@@ -9,16 +9,18 @@ passport.deserializeUser(function (user, done) {
 passport.use(
     new GoogleStrategy(
         {
-            clientID: "GOOGLE_CLIENT_ID",
-            clientSecret: "GOOGLE_CLIENT_SECRET",
+            clientID: process.env.clientidentification,
+            clientSecret: process.env.clientsecret,
             callbackURL: "http://localhost:3000/auth/google/callback"
         },
         function (accessToken, refreshToken, profile, done) {
             var userData = {
                 email: profile.emails[0].value,
                 name: profile.displayName,
+                highscore: profile.highscore,
                 token: accessToken
             };
+            console.log(userData);
             done(null, userData);
         }
     )
