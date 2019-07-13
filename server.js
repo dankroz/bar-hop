@@ -6,6 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 require("dotenv").config();
 
+var passport = require("passport");
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -13,6 +15,10 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+app.use(passport.initialize());
+require("./config/passport");
+
 // Add routes, both API and view
 app.use(routes);
 
