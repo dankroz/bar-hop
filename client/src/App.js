@@ -12,7 +12,7 @@ import PicPage from "./Pages/picpage";
 import Leaderboard from "./Pages/Leaderboard";
 import NoMatch from "./Pages/NoMatch";
 import Home from "./Pages/home";
-import NewBar from "./Pages/addbar";
+import IdentifiedPic from "./Pages/identifiedPic";
 
 function App() {
   return (
@@ -23,7 +23,6 @@ function App() {
       <div className="phone">
         <Router>
           <div>
-            {/* <Nav /> */}
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/signin" component={Signin} />
@@ -33,8 +32,8 @@ function App() {
               <Route exact path="/arrived" component={Arrived} />
               <Route exact path="/bardetails" component={BarDetails} />
               <Route exact path="/picpage" component={PicPage} />
+              <Route exact path="/identified" component={IdentifiedPic} />
               <Route exact path="/leaderboard" component={Leaderboard} />
-              <Route exact path="/addbar" component={NewBar} />
               <Route component={NoMatch} />
             </Switch>
           </div>

@@ -38,6 +38,11 @@ class Home extends Component {
         
       };
 
+
+//     clicked = () => {
+//         return this.props.history.push("/map");
+//     }
+
     render() {
         return (
         <div style={background}>

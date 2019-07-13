@@ -13,5 +13,10 @@
   .desktop{
     display:none;
   }
+  .webcam {
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+  }
 }
  
