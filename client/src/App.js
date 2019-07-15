@@ -25,6 +25,7 @@ function App() {
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/auth/google/callback" component={Home} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/map" component={Maps} />

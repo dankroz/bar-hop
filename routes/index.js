@@ -16,7 +16,7 @@ router.get(
       console.log("authenticated")
       var token = req.user.token;
       console.log(token)
-      res.redirect("http://bar--hop.herokuapp.com");
+      res.redirect("http://localhost:3000/");
   }
 );
 
