@@ -4,9 +4,6 @@ import TextArea from "../Components/TextArea"
 import { Title } from "../Components/SignIn/sign-in";
 import SignInBtn from "../Components/Button/SignInBtn";
 
-
-
-
 class SignUp extends Component {
     state = {
         email: "",
