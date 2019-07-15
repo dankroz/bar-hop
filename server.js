@@ -6,11 +6,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 require("dotenv").config();
 
-// new passport attempt
-mongoose.Promise = global.Promise;
-var LocalStrategy = require('passport-local').Strategy;
-
-var passport = require("passport");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -19,19 +14,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// new passport
-app.use(require('express-session')({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: false
-}));
-app.use(passport.initialize());
-app.use(passport.session());
-
-var User = require('./models/user');
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
 
 // Add routes, both API and view
 app.use(routes);
