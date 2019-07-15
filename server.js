@@ -20,8 +20,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(passport.initialize());
-require("./config/passport");
+// app.use(passport.initialize());
+// require("./config/passport");
 
 // new passport
 app.use(require('express-session')({
