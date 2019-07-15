@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./assets/styles/style.css";
+// import "./assets/styles/style.css";
 import "./assets/styles/Features.css";
 import mobile from "./assets/img/barhop.png"
 import yelp from "./assets/img/yelp.png"
@@ -10,7 +10,7 @@ import challenge from "./assets/img/challenge.png"
 class Features extends Component {
     render() {
         return (
-            <div className="FeaturesBody">
+            <div className="colorBody">
                 <div className="color-container">
                     <div className="container mt-5 mx-auto my-auto d-flex justify-content-center">
                         <div className="row mt-5">
@@ -52,7 +52,7 @@ class Features extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                    </div>
                 <div className="footer-container">
                     <footer id="sticky-footer" className="py-4 bg-light text-dark-50">
                         <div className="container text-center">
@@ -60,7 +60,7 @@ class Features extends Component {
                         </div>
                     </footer>
                 </div>
-            </div>
+                </div>
         );
     }
 }
