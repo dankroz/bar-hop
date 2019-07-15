@@ -14,7 +14,7 @@ class About extends Component {
                 <div className="img-container">
                     <div className="container">
                         <div className="row fontStyle mx-auto my-auto d-flex justify-content-center">
-                            <h1 className="mainHeader col-md-12 text-center text-light">A BAR SCAVENGER HUNT</h1>
+                            <h1 className="mainHeader col-md-12 text-center text-light mt-5">A BAR SCAVENGER HUNT</h1>
                             <h5 className="subtitle col-md-12 text-center text-light">For finding new drinking spots in Philadelphia</h5>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ class About extends Component {
                 <div className="beer-container">
                     <div className="container">
                         <div className="row fontStyle mx-auto my-auto d-flex justify-content-center">
-                            <h1 className="mainHeader col-md-12 text-center text-light">FIND LOCAL DRINKING SPOTS</h1>
+                            <h1 className="mainHeader col-md-12 text-center text-light mt-5">1 FIND LOCAL DRINKING SPOTS</h1>
                             <h5 className="subtitle col-md-12 text-center text-light">With entertaining mini-games and challenges along the way</h5>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ class About extends Component {
                 <div className="bar-container">
                     <div className="container">
                         <div className="row fontStyle mx-auto my-auto d-flex justify-content-center">
-                            <h1 className="mainHeader col-md-12 text-center text-light">FIND LOCAL DRINKING SPOTS</h1>
+                            <h1 className="mainHeader col-md-12 text-center text-light mt-5">FIND LOCAL DRINKING SPOTS</h1>
                             <h5 className="subtitle col-md-12 text-center text-light">With entertaining mini-games and challenges along the way</h5>
                         </div>
                     </div>
