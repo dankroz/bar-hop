@@ -15,6 +15,15 @@ const background = {
 }
 
 class ExtraHelp extends Component {
+    clicked = event => {
+        event.preventDefault();
+        console.log("hello");
+    }
+    help = () => {
+        console.log("hello");
+        this.props.history.push("/map");
+
+    }
 
     render() {
         return (
@@ -22,9 +31,10 @@ class ExtraHelp extends Component {
                 <div className="title">
                     <h1 style={{ color: "white"}}>Extra Help</h1>
                 </div>
-                    <SmallBtn>
+                    <SmallBtn onClick={this.help}>
                         X
                     </SmallBtn>
+                    >
                     <Jumbotron />
                     <Button onClick={this.clicked}>
                         Add Hint

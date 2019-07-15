@@ -1,0 +1,34 @@
+.FeaturesBody{
+    background-image: url("../img/nightclub.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.white-container{
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.darkHeader{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.932);
+    font-size:63px !important;
+    font-weight: bold;
+    color: white  !important;
+    
+}
+
+.darkSubtitle{
+    text-shadow: 1px 1px 2px rgba(2, 2, 2, 0.733);
+    font-size:25px;
+    font-weight: bold;
+    color: white !important;
+}
