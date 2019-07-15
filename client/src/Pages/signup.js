@@ -35,6 +35,7 @@ class SignUp extends Component {
         if (query.token) {
           window.localStorage.setItem("jwt", query.token);
           this.props.history.push("/");
+          console.log(query.token)
        }
     }
     
