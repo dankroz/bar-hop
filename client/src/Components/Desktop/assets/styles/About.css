@@ -10,10 +10,9 @@
 
 .img-container{
     content:"";
-    height:100%; /* fix for mobile browser address bar appearing disappearing */
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
     left:0;
     right:0;
-    padding-bottom: 25px;
     z-index:1; /* needed to keep in the background */
     background: url("../img/mojito.jpg") center center;
     -webkit-background-size: cover;
@@ -26,7 +25,7 @@
         content:"";
         position:fixed; /* stretch a fixed position to the whole screen */
         top:0;
-        height:200%; /* fix for mobile browser address bar appearing disappearing */
+        height:100vh; /* fix for mobile browser address bar appearing disappearing */
         left:0;
         right:0;
         z-index:-1; /* needed to keep in the background */
@@ -39,9 +38,7 @@
 
 .beer-container{
     content:"";
-    padding-bottom: 55px;
-    padding-top: 20px;
-    height:100%; /* fix for mobile browser address bar appearing disappearing */
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
     left:0;
     right:0;
     z-index:1; /* needed to keep in the background */
@@ -55,8 +52,6 @@
 .bar-container{
     content:"";
     height:100%; /* fix for mobile browser address bar appearing disappearing */
-    padding-bottom: 55px;
-    padding-top: 20px;
     left:0;
     right:0;
     z-index:1; /* needed to keep in the background */
@@ -76,6 +71,87 @@
     background-size: cover;
     margin-top: 50px !important;
 } */
+
+
+
+
+/* nnnnnnnnnnn */
+
+.newBody{
+    background-image: url("../img/wood.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-container{
+    background-image: url("../img/mojito.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-top: 100px; */
+    -webkit-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+-moz-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.685);
+box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.582);
+-webkit-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.486);
+-moz-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.507);
+box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.5);
+}
+
+.beer-container{
+    background-image: url("../img/beer.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    -moz-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.582);
+    -webkit-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.486);
+-moz-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.493);
+box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.466);
+}
+
+.bar-container{
+    background-image: url("../img/drinking.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    -moz-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.582);
+    -webkit-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.486);
+-moz-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.493);
+box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.466);
+}
+.white-container{
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px !important;
+}
 
 @media screen and (min-width: 900px) {
     .white-container{
@@ -145,8 +221,9 @@ img{
 }
 
 .iphoneImg{
-    width: auto !important;
-    height: 40vw !important;
+    width: 80vw;
+    max-width: 900px;
+    height: auto !important;
     border-radius: 35px;
 }
 
