@@ -14,6 +14,7 @@
     padding-left: 9.8px;
     font-size: 15px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.315);
+    z-index: 9999;
  }
 
  .title{

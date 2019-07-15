@@ -16,7 +16,7 @@ const barSeed = [
     longtitude: -75.166650,
     type: "Sports Bar",
     hint1: "This bars name is a synonym for mischievous actions or unacceptable behavior",
-    hint2: "This bar is located on a street named after the a type of grasshopper with exceptional musical talent",
+    hint2: "This bar is located on a street named after a type of grasshopper with exceptional musical talent",
     image: "https://www.airbnb.com/google_place_photo?photoreference=CmRaAAAAbkRcnIFezWxOw-e0OdkZ1xubuhE9aZucJfQi5GLtKTFBrnfVDUKZhn4tr7PjwY31FwlcsK9ddrbIAbPM-W0W8XvGyJ9kW2FHuNrT8e6PcLGTTGPH9k3UcJqI7nWWoNe8EhA2pSNDddf6AupLFfmkT5ROGhR2YpVt21WH6ETUTdCTX6vINEnZ9w&maxwidth=1000&maxheight=1000&place_id=85040"
   },
   {
