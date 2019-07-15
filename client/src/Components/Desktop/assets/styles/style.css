@@ -1,0 +1,192 @@
+.newBody{
+    background-image: url("../img/wood.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-container{
+    background-image: url("../img/mojito.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-top: 100px; */
+    -webkit-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+-moz-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.685);
+box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.582);
+-webkit-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.486);
+-moz-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.507);
+box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.5);
+}
+
+.beer-container{
+    background-image: url("../img/beer.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    -moz-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.582);
+    -webkit-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.486);
+-moz-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.493);
+box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.466);
+}
+
+.bar-container{
+    background-image: url("../img/drinking.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto !important;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    -moz-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.582);
+    -webkit-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.486);
+-moz-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.493);
+box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.466);
+}
+.white-container{
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px !important;
+}
+
+@media screen and (min-width: 900px) {
+    .white-container{
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
+.footer-container{
+    background-color: rgb(255, 255, 255);
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 130px !important;
+}
+/* flexbox css */
+.flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barhop{
+  width: auto;
+  margin-left: 15px;
+}
+
+img{
+    height: 45px;
+}
+
+.fontStyle{
+    font-family: 'Rubik', sans-serif;
+}
+
+.mainHeader{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.932);
+    font-size:63px !important;
+    font-weight: bold;
+    
+}
+
+.subtitle{
+    text-shadow: 1px 1px 2px rgba(2, 2, 2, 0.733);
+    font-size:25px;
+    font-weight: bold;
+}
+
+.pageText{
+    font-size: 26px !important;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(2, 2, 2, 0.404);
+    font-weight: bold;
+}
+
+.nav-link{
+    color: black;
+}
+
+.friendsImg{
+    width: auto;
+    height: 380px;
+    border-radius: 35px;
+}
+
+.iphoneImg{
+    width: 80vw;
+    max-width: 900px;
+    height: auto !important;
+    border-radius: 35px;
+}
+
+
+.breweryImg{
+    max-width: auto;
+    height: 280px;
+    border-radius: 35px;
+}
+
+.mugImg{
+    max-width: auto;
+    height: 330px;
+    border-radius: 35px;
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1400px;
+    }
+}
+
+
+.row{
+    width: 100%;
+}
+/* .navbar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 9999;
+    height: 100px
+} */
+.navbar-nav .nav-link{
+    padding-right: 20px !important;
+    color: #0A2463 !important;
+    font-weight: bold;
+}
+.navbar-collapse{
+    margin-right: 20px;
+}
+
+.navbar-toggler{
+    margin-right: 10px;
+
+}

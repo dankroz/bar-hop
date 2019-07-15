@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "../Components/Background/style.css";
 
-
-
 class BarDetails extends Component {
 
     render() {
@@ -10,6 +8,7 @@ class BarDetails extends Component {
             <div>
                 <div>
                     <h1>Bar Details Go Here</h1>
+                    
                 </div>
             </div>
         )
