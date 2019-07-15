@@ -11,7 +11,7 @@ class About extends Component {
     render() {
         return (
             <div className="newBody">
-                <div className="img-container flexbox">
+                <div className="img-container">
                     <div className="container">
                         <div className="row fontStyle mx-auto my-auto d-flex justify-content-center">
                             <h1 className="mainHeader col-md-12 text-center text-light">A BAR SCAVENGER HUNT</h1>
