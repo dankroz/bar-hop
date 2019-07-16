@@ -38,7 +38,7 @@ class Arrived extends Component {
             <p className="d-flex justify-content-center mt-4"style={{margintop: "30px",fontSize: 16, color: "#0A2463"}}>
             You've Arrived!
             </p>
-            BAR NAME GOES HERE
+            {this.props.closestBar.name}
             <p className="d-flex justify-content-center mt-4"style={{margintop: "30px",fontSize: 16, color: "#0A2463", opacity: ".3"}}>
             POINTS GO HERE
             </p>

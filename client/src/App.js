@@ -177,7 +177,7 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} userLong={this.state.Userlong} userLat={this.state.Userlat}/>}/>
               <Route exact path="/help" component={ExtraHelp} />
-              <Route exact path="/arrived" component={Arrived} />
+              <Route exact path="/arrived" render={()=> <Arrived closestBar={this.state.closestBar} />} />
               <Route exact path="/bardetails" component={BarDetails} />
               <Route exact path="/picpage" component={PicPage} />
               <Route exact path="/identified" component={IdentifiedPic} />
