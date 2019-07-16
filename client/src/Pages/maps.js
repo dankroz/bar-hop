@@ -13,7 +13,30 @@ class Maps extends Component {
     Userlat: "",
     Userlong: "",
     redirect: false,
-    redirect1: false
+    redirect1: false,
+    wrong: false
+  };
+
+styles = {
+    position: "fixed",
+    top: 0,
+    right: 0,
+    marginRight: 13,
+    marginTop: 13,
+    backgroundColor: "white",
+    color: "Blue",
+    fontWeight: "bold",
+    borderRadius: 50,
+    width: 30,
+    height: 30,
+    paddingTop: 3.5,
+    paddingLeft: 9.8,
+    fontSize: 15,
+    zIndex: 9998,
+}
+
+  componentDidMount() {
+    //console.log(this.props.Userlong)
   };
 
   Loading = () => {
@@ -38,16 +61,21 @@ class Maps extends Component {
   };
 
   checked = () => {
+      let latEquals = (this.state.Userlat - this.props.closestBar.latitude);
+      let longEquals = (this.state.Userlong - this.props.closestBar.longtitude);
+      console.log("LongEquals" + longEquals)
+      console.log("LatEquals" + latEquals)
     if (
-      this.state.Userlat - this.props.closestBar.latitude < 0.002 ||
-      (this.state.Userlat - this.props.closestBar.latitude > -0.002 &&
-        this.state.Userlong - this.props.closestBar.longitude < 0.002) ||
-      this.state.Userlong - this.props.closestBar.longitude > -0.002
+        ((latEquals < 0.002) && (latEquals > -0.002) &&
+      (longEquals < 0.002) && (longEquals > -0.002))
     ) {
       alert("well this was fun");
       this.setRedirect();
     } else {
-      alert("Shit" + (this.state.Userlat - this.props.closestBar.latitude));
+      alert("Shit" + latEquals + "|G" + longEquals);
+      this.setState({
+        wrong: true
+      });
     }
   };
 
@@ -86,14 +114,16 @@ class Maps extends Component {
       <div className="global">
         <div>
           {this.renderRedirect1()}
-          <SmallBtn onClick={this.setRedirect1}>?</SmallBtn>
+          <SmallBtn onClick={this.setRedirect1}>?</SmallBtn> 
         </div>
         
         <GreenBanner> {this.props.closestBar.hint1} </GreenBanner>
-        <SimpleMap />
+        <SimpleMap Userlong={this.props.Userlong} Userlat={this.props.Userlat}/>
+        
         <div>
           {this.renderRedirect()}
           <Button onClick={this.Loading}>Make A Guess</Button>
+          {this.state.wrong === true && <h2 style={this.style}>Wrong: To Far Away</h2>}
         </div>
       </div>
     );
