@@ -1,16 +1,8 @@
 import React, { Component } from "react";
 import "../Components/Background/style.css";
 import Button from "../Components/Button"
+import Opener from "../Components/Home/index"
 import API from "../Utils/API"
-
-const background = {
-    backgroundColor: "#0A2463",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100vh"
-}
 
 class Home extends Component {
     state = {
@@ -45,7 +37,13 @@ class Home extends Component {
 
     render() {
         return (
-        <div style={background}>
+        <div>
+            <Opener>
+                Welcome to Bar Hop!
+                <p className="d-flex justify-content-center mt-4"style={{margintop: "30px", fontSize: 16, color: "#0A2463"}}>
+                Click the link below to get started
+                </p>
+            </Opener>
             <Button onClick={this.loadBars}>
             Start Bar Hop
             </Button>
