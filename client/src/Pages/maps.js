@@ -123,11 +123,16 @@ class Maps extends Component {
         event.preventDefault();
         console.log("hello");
     }
+    help = () => {
+        console.log("hello");
+        this.props.history.push("/help");
+
+    }
     render() {
         
         return (
             <div className="global">
-                <SmallBtn>
+                <SmallBtn onClick={this.help}>
                     ?
                 </SmallBtn>
                 <GreenBanner > {this.props.closestBar.hint1} </GreenBanner>

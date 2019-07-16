@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Desktop from "./Components/Desktop/index";
+import Desktop from "./Components/Desktop/Routes";
 import Arrived from "./Pages/arrived";
 import Maps from "./Pages/maps";
 import ExtraHelp from "./Pages/extrahelp";
