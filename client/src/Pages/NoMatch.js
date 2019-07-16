@@ -22,7 +22,7 @@ render(){
           </div>
         </Col>
       </Row>
-      <Button onClick={this.clicked}>
+      <Button onClick={this.clicked} >
         Next Challenge
       </Button>
     </Container>
