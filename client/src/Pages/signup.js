@@ -3,8 +3,6 @@ import "../Components/Background/style.css";
 import TextArea from "../Components/TextArea"
 import { Title } from "../Components/SignIn/sign-in";
 import SignInBtn from "../Components/Button/SignInBtn";
-import queryString from "query-string";
-import Google from "../Components/Google";
 
 
 
@@ -29,14 +27,6 @@ class SignUp extends Component {
 
         
     };
-
-    componentWillMount() {
-        var query = queryString.parse(this.props.location.search);
-        if (query.token) {
-          window.localStorage.setItem("jwt", query.token);
-          this.props.history.push("/");
-       }
-    }
     
     render() {
         return (
@@ -45,8 +35,6 @@ class SignUp extends Component {
                 <Title>
                     Sign Up
                 </Title>
-
-                <Google></Google>
 
                 <TextArea
                     placeholder="Username"
