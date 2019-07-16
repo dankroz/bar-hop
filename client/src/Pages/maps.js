@@ -105,7 +105,7 @@ class Maps extends Component {
     });
   };
   renderRedirect2 = () => {
-    if (this.state.redirect1) {
+    if (this.state.redirect2) {
       return <Redirect to="/bardetails" />;
     }
   };
@@ -132,11 +132,11 @@ class Maps extends Component {
         {this.state.wrong === true && (<Modal  onClick={this.handleFormSubmit}/>)}
         <div>
           {this.renderRedirect()}
-          <Button onClick={this.Loading}>Make A Guess</Button>
+          <Button onClick={this.setRedirect}>Make A Guess</Button>
         </div>
         <div className="container txt-alignment">
             {this.renderRedirect2()}
-            <p onClick={this.Loading} className="bottomText pt-2" style={{ fontSize: 12, color: "#0A2463", fontStyle: "bold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.241)"}}>Can't find this location? <a className="" href="/bardetails"><u className="newDestinationFont">Give Up</u></a></p>
+            <p onClick={this.setRedirect2} className="bottomText pt-2" style={{ fontSize: 12, color: "#0A2463", fontStyle: "bold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.241)"}}>Can't find this location? <u className="newDestinationFont">Give Up</u></p>
         </div>
       </div>
     );

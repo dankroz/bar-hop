@@ -159,7 +159,9 @@ class App extends Component {
     Userlat: "",
     closest: "",
     closestBar: "",
-    ready:"false"
+    ready:"false",
+    array: ["jersey", "beer", "television", "juke box", "beer tap", "shot glass", "shotski", "wine glass", "neon"],
+    word: "beer"
   }
 
   
@@ -198,7 +200,12 @@ class App extends Component {
 //     this.Loading();
 //     //return  this.props.history.push("/map")
 //   };
-
+randomWords = () => {
+  var choiceIndex = Math.floor(Math.random() * this.state.array.length)
+  this.setState({word: this.state.array[choiceIndex]})
+  console.log(this.state.word)
+  
+  };
 
 Loading = () => {
     // HTML5/W3C Geolocation
@@ -286,7 +293,7 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
               <Route exact path="/help" render={()=> <ExtraHelp closestBar={this.state.closestBar} />} />
               <Route exact path="/arrived" render={()=> <Arrived closestBar={this.state.closestBar} />} />
               <Route exact path="/bardetails" render={()=> <BarDetails closestBar={this.state.closestBar} />} />
-              <Route exact path="/picpage" component={PicPage} />
+              <Route exact path="/picpage" render={()=> <PicPage parentMethod1={this.randomWords} array={this.state.array} word={this.state.word}/>} />
               <Route exact path="/identified" component={IdentifiedPic} />
               <Route exact path="/leaderboard" component={Leaderboard} />
               <Route component={NoMatch} />

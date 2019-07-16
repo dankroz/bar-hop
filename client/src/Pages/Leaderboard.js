@@ -11,7 +11,7 @@ class Leaderboard extends Component {
         return (
             <div>
                 <div className="title">
-                    <h1>Leaderboard</h1>
+                    <h1 style={{color: "#0A2463"}}>Leaderboard</h1>
                 </div>
                 <Jumbotron/>
                 <Button>
