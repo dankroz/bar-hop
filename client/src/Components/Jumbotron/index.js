@@ -7,6 +7,7 @@ function Jumbotron({ children }) {
     <div className="centeredDiv">
       <div
         className="jumbotron"
+        style={{fontSize: 24}}
       >
         {children}
       </div>

@@ -16,8 +16,13 @@ const background = {
 
 class ExtraHelp extends Component {
     state = {
-        redirect: false
+        redirect: false,
+        addHint: false
       };
+      addHint = () => {
+        this.setState({addHint: true})
+        
+      }
       setRedirect = () => {
         this.setState({
           redirect: true
@@ -36,11 +41,11 @@ class ExtraHelp extends Component {
         </div>
         <SmallBtn onClick={this.setRedirect}>X</SmallBtn>
         >
-        <Jumbotron>{this.props.closestBar.hint2}</Jumbotron>
+        {this.state.addHint === true && (<Jumbotron>{this.props.closestBar.hint2}</Jumbotron>)}
         <div>
             {this.renderRedirect()}
-          <Button onClick={this.setRedirect}>
-            Add Hint/Return
+          <Button onClick={this.addHint}>
+            Add Hint
             <p style={{ marginBottom: "0px", fontSize: 8, color: "#404040" }}>
               -10pts
             </p>

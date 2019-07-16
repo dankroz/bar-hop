@@ -3,6 +3,7 @@ import Webcam from "react-webcam";
 import Button from "../Components/Button"
 import Clarifai from "clarifai"
 import { withRouter } from 'react-router-dom'
+import { Redirect } from "react-router-dom";
 
 // const Clarifai = require('clarifai');
 // const Button = withRouter(({ history }) => (
@@ -12,6 +13,40 @@ import { withRouter } from 'react-router-dom'
 //     </Buttoner>
 //   ))
 class PicPage extends Component {
+  state = {
+    redirect1: false,
+    array: ["jersey", "beer", "television", "juke box", "beer tap", "shot glass", "shotski", "wine glass", "neon"],
+    word: ""
+  };
+  
+  componentDidMount() {
+      this.randomWords()
+  };
+
+  randomWords = () => {
+  var choiceIndex = Math.floor(Math.random() * this.state.array.length)
+  this.setState({word: this.state.array[choiceIndex]})
+  console.log(this.state.word)
+  
+  };
+  
+  
+
+  
+  
+  
+  setRedirect1 = () => {
+    this.setState({
+      redirect1: true
+    });
+  };
+  renderRedirect = () => {
+    if (this.state.redirect1) {
+      return <Redirect to="/" />;
+    }
+  };
+
+
   setRef = webcam => {
     this.webcam = webcam;
   };
@@ -73,11 +108,19 @@ class PicPage extends Component {
           // width={355}
           videoConstraints={videoConstraints}
         />
-        <Button onClick={this.capture}>Take Picture</Button>
+        <div className="text-center">
+          <button className="btn" onClick={this.capture}><span  role="img" aria-label="photo">📸</span></button>
+        </div>
+        <div className="text-center mx-auto">
+          <div className="jumbotron panel panel-primary">Find a {this.state.word} at the bar. Take a picture for +50 points</div>
+        </div>
+        <div> 
+          {this.renderRedirect()}
+          <Button onClick={this.setRedirect1}>Go To Next Bar</Button>
+        </div>
       </div>
     );
   }
-
-}
+};
 
 export default withRouter(PicPage);
