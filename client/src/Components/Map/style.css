@@ -22,3 +22,10 @@
   color: #0A2463;
   padding-top: 25px;
 }   
+
+.modal-content{
+  margin-top: 350px;
+}
+.modal{
+  display: block !important;
+}

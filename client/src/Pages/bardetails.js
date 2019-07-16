@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../Components/Background/style.css";
 import {
  
-  MoreDetails,
+  
   Operation,
   BottomLink
 } from "../Components/Yelp";
@@ -62,7 +62,7 @@ class BarDetails extends Component {
                     {this.props.closestBar.name}
                   </div>
                   <div className="ml-auto rating-bg d-flex justify-content-end">
-                    4.6
+                  {this.props.closestBar.rating}
                   </div>
                 </div>
                 <div
@@ -75,7 +75,28 @@ class BarDetails extends Component {
             </div>
           </div>
           <hr className="line" />
-          <MoreDetails />
+          
+          <div className="details-container container">
+                <div className="row">
+                    <div className="container col-sm-12">
+                        <div className="col-sm-6" style={{ fontSize: 17, color: "#0A2463", opacity: "1", fontWeight: "bold" }}>More Detail</div>
+                    </div>
+                    <div className="container col-sm-12">
+                        <div className="col-sm-6 mt-3" style={{ fontSize: 14, color: "#0A2463", opacity: ".3", fontWeight: "bold" }}>ADDRESS</div>
+                    </div>
+                    <div className="container col-sm-12">
+                    <div className="d-flex bd-highlight mt-3">
+                        <div className="row">
+                            <div className="col-md-2 bd-highlight" style={{ fontSize: 17, color: "#0A2463", opacity: "1", marginLeft: 14}}>{this.props.closestBar.street}</div>
+                            <div className="col-md-2 bd-highlight" style={{ fontSize: 17, color: "#0A2463", opacity: "1", marginLeft: 14}}>{this.props.closestBar.cityZip}</div>
+                        </div>
+                        <div className="ml-auto graymap-bg d-flex justify-content-end"></div>
+                    </div>
+                    </div>
+                    <div className="col-sm-6 mt-3 text-primary" style={{ fontSize: 14, opacity: "1", fontWeight: "bold", marginLeft: 14}}>Open in Map</div>
+                </div>
+            </div>
+
           <Operation />
 
           <div>
