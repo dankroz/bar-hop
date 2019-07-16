@@ -2,9 +2,7 @@
     width: 100vw;
     height: auto;
     max-height: 155px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    overflow: hidden;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }

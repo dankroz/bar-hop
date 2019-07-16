@@ -15,6 +15,7 @@ class Maps extends Component {
     Userlong: "",
     redirect: false,
     redirect1: false,
+    redirect2:false,
     wrong: false
   };
 
@@ -51,9 +52,9 @@ class Maps extends Component {
     console.log("LongEquals" + longEquals);
     console.log("LatEquals" + latEquals);
     if (
-      latEquals === 0.002 &&
+      latEquals < 0.002 &&
       latEquals > -0.002 &&
-      longEquals === 0.002 &&
+      longEquals < 0.002 &&
       longEquals > -0.002
     ) {
     //   alert("well this was fun");
@@ -98,6 +99,16 @@ class Maps extends Component {
       return <Redirect to="/help" />;
     }
   };
+  setRedirect2 = () => {
+    this.setState({
+      redirect2: true
+    });
+  };
+  renderRedirect2 = () => {
+    if (this.state.redirect2) {
+      return <Redirect to="/bardetails" />;
+    }
+  };
 
   clicked = () => {
     return this.props.history.push("/map");
@@ -121,7 +132,11 @@ class Maps extends Component {
         {this.state.wrong === true && (<Modal  onClick={this.handleFormSubmit}/>)}
         <div>
           {this.renderRedirect()}
-          <Button onClick={this.Loading}>Make A Guess</Button>
+          <Button onClick={this.setRedirect}>Make A Guess</Button>
+        </div>
+        <div className="container txt-alignment">
+            {this.renderRedirect2()}
+            <p onClick={this.setRedirect2} className="bottomText pt-2" style={{ fontSize: 12, color: "#0A2463", fontStyle: "bold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.241)"}}>Can't find this location? <u className="newDestinationFont">Give Up</u></p>
         </div>
       </div>
     );
