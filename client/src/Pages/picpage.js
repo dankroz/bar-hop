@@ -5,6 +5,12 @@ import Clarifai from "clarifai"
 import { withRouter } from 'react-router-dom'
 import { Redirect } from "react-router-dom";
 
+const buttonBackground = {
+  backgroundColor: "#0A2463",
+  color: "white",
+  borderRadius: 30
+};
+
 // const Clarifai = require('clarifai');
 // const Button = withRouter(({ history }) => (
 //     <Buttoner type='button' 
@@ -15,20 +21,17 @@ import { Redirect } from "react-router-dom";
 class PicPage extends Component {
   state = {
     redirect1: false,
-    array: ["jersey", "beer", "television", "juke box", "beer tap", "shot glass", "shotski", "wine glass", "neon"],
-    word: ""
+    
   };
   
-  componentDidMount() {
-      this.randomWords()
-  };
+  
 
-  randomWords = () => {
-  var choiceIndex = Math.floor(Math.random() * this.state.array.length)
-  this.setState({word: this.state.array[choiceIndex]})
-  console.log(this.state.word)
+  // randomWords = () => {
+  // var choiceIndex = Math.floor(Math.random() * this.state.array.length)
+  // this.setState({word: this.state.array[choiceIndex]})
+  // console.log(this.state.word)
   
-  };
+  // };
   
   
 
@@ -72,6 +75,7 @@ class PicPage extends Component {
           if (item.value > .8 && item.value < 1 && (/^(water\ssports|beer|bar\stap|juke\sbox|neon|shot\sglass|jersey|wine|shotski|tv|television)$/.test(item.name))) {
             console.log("did this work")
             console.log(item.name);
+            this.props.parentMethod1();
             return  this.props.history.push("/identified");
           } else {
             console.log("you failed at " + item.name)
@@ -109,10 +113,10 @@ class PicPage extends Component {
           videoConstraints={videoConstraints}
         />
         <div className="text-center">
-          <button className="btn" onClick={this.capture}><span  role="img" aria-label="photo">📸</span></button>
+          <button className="btn" style={buttonBackground} onClick={this.capture}>Take Picture <span  role="img" aria-label="photo">📸</span></button>
         </div>
         <div className="text-center mx-auto">
-          <div className="jumbotron panel panel-primary">Find a {this.state.word} at the bar. Take a picture for +50 points</div>
+          <div className="panel panel-primary m-5" style={{ fontSize: 27, color: "white", opacity: "1", fontWeight: "bold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.247)" }}>Find a {this.props.word} at the bar. Take a picture for +50 points</div>
         </div>
         <div> 
           {this.renderRedirect()}

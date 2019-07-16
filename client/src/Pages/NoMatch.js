@@ -59,7 +59,7 @@ render(){
    
     </Opener>
     <Button onClick={this.clicked}>
-    Next Challenge
+    Try Again
     </Button>
     </div>
     </>
