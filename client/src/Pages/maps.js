@@ -54,7 +54,7 @@ render() {
         console.log("The Baraa: " + this.props.closestBar.latitude)
         return (
             <div className="global">
-                <SmallBtn>
+                <SmallBtn onClick={this.help}>
                     ?
                 </SmallBtn>
                 <GreenBanner > {this.props.closestBar.hint1} </GreenBanner>

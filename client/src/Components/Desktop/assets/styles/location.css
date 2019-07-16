@@ -1,0 +1,26 @@
+.philly-container{
+    background-image: url("../img/philly.jpg");
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh !important;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 100px; */
+    -webkit-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.548);
+    -moz-box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.685);
+    box-shadow: inset -5px 26px 73px -43px rgba(0, 0, 0, 0.582);
+    -webkit-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.486);
+    -moz-box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.507);
+    box-shadow: inset -5px -21px 73px -43px rgba(0, 0, 0, 0.5);
+}
+
+.footer-location{
+    position: relative; 
+    bottom: 0;
+}

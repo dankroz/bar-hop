@@ -34,7 +34,7 @@ class PicPage extends Component {
         console.log("item.value")
         for (let i = 0; i < barItems.length; i++) {
           const item = barItems[i];
-          if (item.value > .8 && item.value < 1 && (/^(water\ssports|beer|bar\stap|juke\sbox|neon|shot\sglass|jersey|wine|shotski|tv)$/.test(item.name))) {
+          if (item.value > .8 && item.value < 1 && (/^(water\ssports|beer|bar\stap|juke\sbox|neon|shot\sglass|jersey|wine|shotski|tv|television)$/.test(item.name))) {
             console.log("did this work")
             console.log(item.name);
             return  this.props.history.push("/identified");

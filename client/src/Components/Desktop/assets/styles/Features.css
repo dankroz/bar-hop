@@ -1,0 +1,45 @@
+.colorBody:after{
+    content:"";
+    position:fixed; /* stretch a fixed position to the whole screen */
+    top:0;
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
+    left:0;
+    right:0;
+    z-index:-1; /* needed to keep in the background */
+    background: url("../img/nightclub.jpg") center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.color-container{
+    background-attachment: fixed;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 900px) {
+    .color-container{
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  }
+.darkHeader{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.932);
+    font-size:63px !important;
+    font-weight: bold;
+    color: white  !important;
+    
+}
+
+.darkSubtitle{
+    text-shadow: 1px 1px 2px rgba(2, 2, 2, 0.733);
+    font-size:25px;
+    font-weight: bold;
+    color: white !important;
+}
