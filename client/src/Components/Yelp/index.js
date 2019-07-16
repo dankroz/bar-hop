@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import SampleImg from "./club.png"
 
-export function Image() {
+export function Image(props) {
     return (
         <div className="bar-img">
             <img className="img-style" src={SampleImg} alt={"club"} />

@@ -13,7 +13,7 @@ import Leaderboard from "./Pages/Leaderboard";
 import NoMatch from "./Pages/NoMatch";
 import Home from "./Pages/home";
 import IdentifiedPic from "./Pages/identifiedPic";
-import API from "./Utils/API"
+//import API from "./Utils/API"
 //import ShopContext from "./context/shop-context";
 
 class App extends Component {
@@ -67,42 +67,39 @@ class App extends Component {
     Userlong: "",
     Userlat: "",
     closest: "",
-    closestBar: ""
+    closestBar: "",
+    ready:"false"
   }
 
   componentDidMount() {
-    this.Loading();
-
-    // setTimeout(this.getLocation(), 3000); 
-    // this.loadBars();
-     
+    this.Loading();     
   };
 
-  getLocation = () => { 
-    navigator.geolocation.getCurrentPosition(function(position) {
-        console.log("hello")
-        console.log(position.coords.latitude, position.coords.longitude);   
-      })
-  };
+//   getLocation = () => { 
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//         console.log("hello")
+//         console.log(position.coords.latitude, position.coords.longitude);   
+//       })
+//   };
 
-  loadBars = () => {
-    API.getBars()
-      .then(res => this.setState({ bars: res.data }))
-      .catch(err => console.log(err));
-    console.log(this.state.bars);
-    // console.log(this.getLocation())
-    this.loadBars1();
-  };
+//   loadBars = () => {
+//     API.getBars()
+//       .then(res => this.setState({ bars: res.data }))
+//       .catch(err => console.log(err));
+//     console.log(this.state.bars);
+//     // console.log(this.getLocation())
+//     this.loadBars1();
+//   };
 
-loadBars1 = () => {
-    API.getBars()
-      .then(res => this.setState({ bars: res.data }))
-      .catch(err => console.log(err));
-    console.log(this.state.bars);
-    // console.log(this.getLocation())
-    this.Loading();
-    //return  this.props.history.push("/map")
-  };
+// loadBars1 = () => {
+//     API.getBars()
+//       .then(res => this.setState({ bars: res.data }))
+//       .catch(err => console.log(err));
+//     console.log(this.state.bars);
+//     // console.log(this.getLocation())
+//     this.Loading();
+//     //return  this.props.history.push("/map")
+//   };
 
 
 Loading = () => {
@@ -143,7 +140,9 @@ NearestCity = (latitude, longitude) => {
     console.log(this.state.bars[closest]);
     this.setState({closestBar:this.state.bars[closest]});
     console.log("The Closest bar to our location is " + this.state.closestBar.name);
-    //this.clicked()
+    this.setState({
+      ready: true
+    });
 }
 
 PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
@@ -172,13 +171,13 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
         <Router>
           <div>
             <Switch>
-              <Route exact path="/" render={()=> <Home closestBar={this.state.closestBar} />} />
+              <Route exact path="/" render={()=> <Home closestBar={this.state.closestBar} ready={this.state.ready} />} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} userLong={this.state.Userlong} userLat={this.state.Userlat}/>}/>
+              <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} Userlong={this.state.Userlong} Userlat={this.state.Userlat}/>}/>
               <Route exact path="/help" render={()=> <ExtraHelp closestBar={this.state.closestBar} />} />
               <Route exact path="/arrived" render={()=> <Arrived closestBar={this.state.closestBar} />} />
-              <Route exact path="/bardetails" component={BarDetails} />
+              <Route exact path="/bardetails" render={()=> <BarDetails closestBar={this.state.closestBar} />} />
               <Route exact path="/picpage" component={PicPage} />
               <Route exact path="/identified" component={IdentifiedPic} />
               <Route exact path="/leaderboard" component={Leaderboard} />
