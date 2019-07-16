@@ -170,7 +170,7 @@ class App extends Component {
     this.setState({Userlat: ""})
     this.setState({Userlong: ""})
     console.log("Closest: " + this.state.closest)
-    this.Loading();     
+        
   };
 
 //   getLocation = () => { 

@@ -5,6 +5,15 @@ import Clarifai from "clarifai"
 import { withRouter } from 'react-router-dom'
 import { Redirect } from "react-router-dom";
 
+const buttonBackground = {
+  backgroundColor: "white",
+  color: "#0A2463",
+  borderRadius: 30,
+  left: 0,
+  width: "100%",
+  height: "100vh"
+};
+
 // const Clarifai = require('clarifai');
 // const Button = withRouter(({ history }) => (
 //     <Buttoner type='button' 
@@ -109,7 +118,7 @@ class PicPage extends Component {
           videoConstraints={videoConstraints}
         />
         <div className="text-center">
-          <button className="btn" onClick={this.capture}><span  role="img" aria-label="photo">📸</span></button>
+          <button className="btn" onClick={this.capture}>Take Picture <span  role="img" aria-label="photo">📸</span></button>
         </div>
         <div className="text-center mx-auto">
           <div className="panel panel-primary m-5" style={{ fontSize: 27, color: "white", opacity: "1", fontWeight: "bold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.247)" }}>Find a {this.state.word} at the bar. Take a picture for +50 points</div>
