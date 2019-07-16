@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SimpleMap from "../Components/Map/map";
+import Modal from "../Components/Map/modal";
 import "../Components/Map/style.css";
 import GreenBanner from "../Components/Banner/index.js";
 import Button from "../Components/Button";
@@ -17,27 +18,11 @@ class Maps extends Component {
     wrong: false
   };
 
-styles = {
-    position: "fixed",
-    top: 0,
-    right: 0,
-    marginRight: 13,
-    marginTop: 13,
-    backgroundColor: "white",
-    color: "Blue",
-    fontWeight: "bold",
-    borderRadius: 50,
-    width: 30,
-    height: 30,
-    paddingTop: 3.5,
-    paddingLeft: 9.8,
-    fontSize: 15,
-    zIndex: 9998,
-}
+
 
   componentDidMount() {
     //console.log(this.props.Userlong)
-  };
+  }
 
   Loading = () => {
     // HTML5/W3C Geolocation
@@ -61,23 +46,35 @@ styles = {
   };
 
   checked = () => {
-      let latEquals = (this.state.Userlat - this.props.closestBar.latitude);
-      let longEquals = (this.state.Userlong - this.props.closestBar.longtitude);
-      console.log("LongEquals" + longEquals)
-      console.log("LatEquals" + latEquals)
+    let latEquals = this.state.Userlat - this.props.closestBar.latitude;
+    let longEquals = this.state.Userlong - this.props.closestBar.longtitude;
+    console.log("LongEquals" + longEquals);
+    console.log("LatEquals" + latEquals);
     if (
-        ((latEquals < 0.002) && (latEquals > -0.002) &&
-      (longEquals < 0.002) && (longEquals > -0.002))
+      latEquals === 0.002 &&
+      latEquals > -0.002 &&
+      longEquals === 0.002 &&
+      longEquals > -0.002
     ) {
-      alert("well this was fun");
+    //   alert("well this was fun");
       this.setRedirect();
     } else {
-      alert("Shit" + latEquals + "|G" + longEquals);
+    //   alert("Shit" + latEquals + "|G" + longEquals);
       this.setState({
         wrong: true
       });
     }
   };
+
+  handleFormSubmit = () => {
+    
+    if (this.state.wrong === true) {
+        this.setState({
+            wrong: false
+          });
+      }
+    };
+        
 
   setRedirect = () => {
     this.setState({
@@ -95,7 +92,6 @@ styles = {
     this.setState({
       redirect1: true
     });
-    
   };
   renderRedirect1 = () => {
     if (this.state.redirect1) {
@@ -114,16 +110,18 @@ styles = {
       <div className="global">
         <div>
           {this.renderRedirect1()}
-          <SmallBtn onClick={this.setRedirect1}>?</SmallBtn> 
+          <SmallBtn onClick={this.setRedirect1}>?</SmallBtn>
         </div>
-        
+
         <GreenBanner> {this.props.closestBar.hint1} </GreenBanner>
-        <SimpleMap Userlong={this.props.Userlong} Userlat={this.props.Userlat}/>
-        
+        <SimpleMap
+          Userlong={this.props.Userlong}
+          Userlat={this.props.Userlat}
+        />
+        {this.state.wrong === true && (<Modal  onClick={this.handleFormSubmit}/>)}
         <div>
           {this.renderRedirect()}
           <Button onClick={this.Loading}>Make A Guess</Button>
-          {this.state.wrong === true && <h2 style={this.style}>Wrong: To Far Away</h2>}
         </div>
       </div>
     );
