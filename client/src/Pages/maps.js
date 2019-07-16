@@ -12,7 +12,8 @@ class Maps extends Component {
   state = {
     Userlat: "",
     Userlong: "",
-    redirect: false
+    redirect: false,
+    redirect1: false
   };
 
   Loading = () => {
@@ -62,6 +63,18 @@ class Maps extends Component {
     }
   };
 
+  setRedirect1 = () => {
+    this.setState({
+      redirect1: true
+    });
+    
+  };
+  renderRedirect1 = () => {
+    if (this.state.redirect1) {
+      return <Redirect to="/help" />;
+    }
+  };
+
   clicked = () => {
     return this.props.history.push("/map");
   };
@@ -71,11 +84,15 @@ class Maps extends Component {
     console.log("The Baraa: " + this.props.closestBar.latitude);
     return (
       <div className="global">
-        <SmallBtn onClick={this.help}>?</SmallBtn>
+        <div>
+          {this.renderRedirect1()}
+          <SmallBtn onClick={this.setRedirect1}>?</SmallBtn>
+        </div>
+        
         <GreenBanner> {this.props.closestBar.hint1} </GreenBanner>
         <SimpleMap />
         <div>
-            {this.renderRedirect()}
+          {this.renderRedirect()}
           <Button onClick={this.Loading}>Make A Guess</Button>
         </div>
       </div>
