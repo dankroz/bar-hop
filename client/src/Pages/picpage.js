@@ -112,7 +112,7 @@ class PicPage extends Component {
           <button className="btn" onClick={this.capture}><span  role="img" aria-label="photo">📸</span></button>
         </div>
         <div className="text-center mx-auto">
-          <div className="jumbotron panel panel-primary">Find a {this.state.word} at the bar. Take a picture for +50 points</div>
+          <div className="panel panel-primary m-5" style={{ fontSize: 27, color: "white", opacity: "1", fontWeight: "bold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.247)" }}>Find a {this.state.word} at the bar. Take a picture for +50 points</div>
         </div>
         <div> 
           {this.renderRedirect()}

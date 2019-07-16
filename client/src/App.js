@@ -99,7 +99,7 @@ class App extends Component {
       latitude: 39.950539,
       longtitude: -75.170582,
       type: "Cocktail Bar",
-      hint1: "This is a bar with an incredibly refined name which should help lead you in the right direction",
+      hint1: "This is a bar",
       hint2: "The title of this bar starts with a single vowel",
       image: "https://www.uwishunu.com/wp-content/uploads/2013/07/ABar_2013-02-M.Edlow-680uw.jpg",
       street:"1737 Walnut St",
@@ -129,15 +129,30 @@ class App extends Component {
       latitude: 39.9493537,
       longtitude: -75.170245,
       type: "Bar & Restaurant",
-      hint1: "The irish owner may or may not have a beard, but he's only one vowel short",
-      hint2: "This bar is known for giving guests a real taste of Ireland",
-      image: "http://www.bardsirishbar.com/images/thebards_exterior.jpg",
-      street:"2013 Walnut St",
-      cityZip:"Philadelphia, PA 19103",
+      hint1: "This bar is well known for their canine friendly atmosphere",
+      hint2: "The bar encourages guests to come, sit, and stay for some tasty treats or craft beer",
+      image: "https://zagat-photos.imgix.net/ChIJPzXhsjrGxokRfz0Y3386McU/d24bf8a11424717de48af086dc26992d.jpg?fit=crop&crop=center&max-w=384&max-h=384&auto=format",
+      street:"224 S 15th St",
+      cityZip:"Philadelphia, PA 19102",
       googleMaps:"https://www.google.com/maps/dir//Good+Dog+Bar,+224+S+15th+St,+Philadelphia,+PA+19102/@39.9493537,-75.170245,17.09z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c6c63ab2e1353f:0xc5313a7fdf183d7f!2m2!1d-75.1662304!2d39.9487759",
       hours: "M 2am T 2am W 2am Th 2am F 2am S 2am Su 2am",
+      rating:"4.0",
+      yelp: "https://www.yelp.com/biz/good-dog-bar-philadelphia?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+    },
+    {
+      name: "Howl at the Moon",
+      latitude: 39.9479639,
+      longtitude: -75.1671929,
+      type: "Bar",
+      hint1: "This bar encourages people to yell into space",
+      hint2: "The bars symbol is synonymous with a warewolf",
+      image: "https://www.visitpittsburgh.com/imager/files_idssasp_com/public/C32/0603d240-7bb4-4f26-8659-cfb449095dc1/f716462d-8818-464f-964e-1d0d7a776e8c_2200f99a241e55606b0e5da9ea141a39.jpg",
+      street:"258 S 15th St",
+      cityZip:"Philadelphia, PA 19102",
+      googleMaps:"https://www.google.com/maps/dir//Howl+at+the+Moon+Philadelphia,+258+S+15th+St,+Philadelphia,+PA+19102/@39.9479639,-75.1671929,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c6c63acda46e05:0xef98bfafb4981ccf!2m2!1d-75.1665446!2d39.947687",
+      hours: "W 2am Th 2am F 2am S 2am",
       rating:"3.5",
-      yelp: "https://www.yelp.com/biz/the-bards-philadelphia?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+      yelp: "https://www.yelp.com/biz/howl-at-the-moon-philadelphia-philadelphia?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
     },
   ],
     Userlong: "",
@@ -146,6 +161,8 @@ class App extends Component {
     closestBar: "",
     ready:"false"
   }
+
+  
 
   componentDidMount() {
     this.setState({closestBar: ""})
@@ -262,7 +279,7 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
         <Router>
           <div>
             <Switch>
-              <Route exact path="/" render={()=> <Home closestBar={this.state.closestBar} ready={this.state.ready} />} />
+              <Route exact path="/" render={()=> <Home parentMethod={this.Loading} closestBar={this.state.closestBar} ready={this.state.ready} bars={this.state.bars}/>} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} Userlong={this.state.Userlong} Userlat={this.state.Userlat}/>}/>

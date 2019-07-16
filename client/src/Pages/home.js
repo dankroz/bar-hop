@@ -4,10 +4,13 @@ import Button from "../Components/Button";
 import { Redirect } from "react-router-dom";
 import Opener from "../Components/Home/index"
 
+
 class Home extends Component {
   state = {
+
     redirect: false
   };
+  
   setRedirect = () => {
     this.setState({
       redirect: true
@@ -19,20 +22,12 @@ class Home extends Component {
     }
   };
 
-  // state = {
-  //     bars: [],
-  //     Userlong: "",
-  //     Userlat: "",
-  //     closest: "",
+ 
 
-  //   };
 
-  // componentDidMount() {
-
-  //     this.loadBars();
-  //     this.getLocation();
-
-  //   };
+  componentDidMount() {
+    this.props.parentMethod();
+    };
 
   // getLocation = () => {
   //     navigator.geolocation.getCurrentPosition(function(position) {
