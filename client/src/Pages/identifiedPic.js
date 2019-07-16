@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from "../Components/Button";
 // import { generateKeyPair } from "crypto";
-
+import Opener from "../Components/Home/index"
 
 const background = {
     backgroundColor: "#0A2463",
@@ -18,21 +18,22 @@ class IdentifiedPic extends Component {
     }
     render() {
         return (
+            <>
             <div style={background}>
-                <div className="pt-5 pl-3 pr-1">
-                    <p>
-                        <span role="img" aria-label="Beer Cheers" style={{ fontSize: "48px" }}>
-                            🍻
-                        </span>
-                    </p>
-                    <h1 style={{ color: "white" }}>Its a match! You found a "enter prop here from pic data"</h1>
-                    <br></br>
-                    <h1 style={{ color: "white" }}>Click next challenge to try and earn more points</h1>
-                </div>
-                <Button onClick={this.clicked}>
-                    Next Challenge
-                    </Button>
+            <Opener>
+            <p className="d-flex justify-content-center mt-4"style={{fontSize: 20, color: "white", fontWeight: "bold"}}>
+            IT'S A MATCH!🍻
+            </p>
+            OBJECT GOES HERE
+            <p className="d-flex justify-content-center mt-4"style={{fontSize: 16, color: "white", opacity: ".3"}}>
+            + 50 POINTS
+            </p>
+            </Opener>
+            <Button onClick={this.clicked}>
+            Next Challenge
+            </Button>
             </div>
+            </>
         )
     }
 

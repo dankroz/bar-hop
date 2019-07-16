@@ -1,0 +1,18 @@
+.logoContainer{
+    height: 100px;
+    width: 100vw;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer{
+    height: 350px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.fontStyle{
+    font-size: 50px;
+}
