@@ -52,7 +52,7 @@ render(){
     </p>
 
     <p className="d-flex justify-content-center mt-4"style={{fontSize: 20, color: "white", fontWeight: "bold"}}>
-    TRY AGAIN!🙄
+    TRY AGAIN!<span  role="img" aria-label="face">🙄</span>
     </p>
 
 
