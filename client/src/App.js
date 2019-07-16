@@ -53,12 +53,21 @@ class App extends Component {
       hint1: "The bar is named after a founding father who made his key discovery using a kite",
       hint2: "This speakeasy has a name that is synonymous with a local Philly museaum",
       image: "https://cdn.vox-cdn.com/thumbor/3Whiy5GiA-zisnM2Yah4neYwjjM=/11x0:736x544/1200x800/filters:focal(11x0:736x544)/cdn.vox-cdn.com/uploads/chorus_image/image/50209745/1932362_109871969373282_3251139940362004347_n.0.0.jpg"
+    },
+    {
+      name: "Pennovation",
+      latitude: 39.940689,
+      longtitude: -75.198807,
+      type: "School",
+      hint1: "This bar is not a bar",
+      hint2: "The name of this taproom is also a synonym for forbidding something, especially by law",
+      image: "https://otg.imgix.net/assets/grid/philadelphia/chinatown-the-loft-district/prohibition-taproom/DSCF1569.JPG?auto=format%2Ccompress&crop=focalpoint&fit=min&fm=jpg&fp-x=0.5&fp-y=0.5&ixlib=php-1.1.0&q=80&w=1200&s=a52ea15fcf561bada53ed0c59379ba45"
     }
   ],
     Userlong: "",
     Userlat: "",
     closest: "",
-    closestBar: "hello"
+    closestBar: ""
   }
 
   componentDidMount() {
@@ -166,7 +175,7 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
               <Route exact path="/" render={()=> <Home closestBar={this.state.closestBar} />} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} />} />
+              <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} userLong={this.state.Userlong} userLat={this.state.Userlat}/>}/>
               <Route exact path="/help" component={ExtraHelp} />
               <Route exact path="/arrived" component={Arrived} />
               <Route exact path="/bardetails" component={BarDetails} />
