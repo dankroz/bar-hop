@@ -7,8 +7,8 @@ import logo from "../Desktop/assets/img/barhopLogo.png"
 function Opener(props) {
     return (
         <div>
-            <div className="container logoContainer">
-                <div className="barhop" href="/">
+            <div className="logoContainer">
+                <div className="pl-0" href="/">
                     <img className="logo" src={logo} alt={"logo"} />
                 </div>
             </div>
