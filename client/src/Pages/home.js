@@ -3,13 +3,18 @@ import "../Components/Background/style.css";
 import Button from "../Components/Button";
 import { Redirect } from "react-router-dom";
 import Opener from "../Components/Home/index"
+import { logoutUser } from "../actions/authActions";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 
 class Home extends Component {
   state = {
 
-    redirect: false
+    redirect: false,
+    redirect1: false
   };
+  
   
   setRedirect = () => {
     this.setState({
@@ -22,104 +27,27 @@ class Home extends Component {
     }
   };
 
- 
-
-
   componentDidMount() {
     this.props.parentMethod();
     };
 
-  // getLocation = () => {
-  //     navigator.geolocation.getCurrentPosition(function(position) {
-  //         console.log("hello")
-  //         console.log(position.coords.latitude, position.coords.longitude);
-  //       })
-  // };
-
-  //     loadBars = () => {
-  //         API.getBars()
-  //           .then(res => this.setState({ bars: res.data }))
-  //           .catch(err => console.log(err));
-  //         console.log(this.state.bars);
-  //         // console.log(this.getLocation())
-  //         //this.Loading();
-  //       };
-
-  //     loadBars1 = () => {
-  //         API.getBars()
-  //           .then(res => this.setState({ bars: res.data }))
-  //           .catch(err => console.log(err));
-  //         console.log(this.state.bars);
-  //         // console.log(this.getLocation())
-  //         this.Loading();
-  //         //return  this.props.history.push("/map")
-  //       };
-
-  //     Loading = () => {
-  //         // HTML5/W3C Geolocation
-  //         if (navigator.geolocation) {
-  //           navigator.geolocation.getCurrentPosition(this.UserLocation);
-  //         }
-  //         // Default to Washington, DC
-  //         else
-  //           console.log("No Geolocation")
-  //       }
-
-  //     UserLocation = (position)  => {
-  //         this.NearestCity(position.coords.latitude, position.coords.longitude);
-
-  //         this.setState({Userlat: position.coords.latitude });
-  //         this.setState({Userlong: position.coords.longitude })
-
-  //         console.log("Lat:" + this.state.Userlat + ", Long:" + this.state.Userlong);
-  //       }
-
-  //     NearestCity = (latitude, longitude) => {
-
-  //         var minDif = 99999;
-  //         var closest;
-
-  //         for (var index = 0; index < this.state.bars.length; ++index) {
-  //           var dif = this.PythagorasEquirectangular(latitude, longitude, this.state.bars[index].latitude, this.state.bars[index].longtitude);
-  //             console.log("Facts: " + this.state.bars[index].latitude, this.state.bars[index].longtitude)
-  //           if (dif < minDif) {
-  //             closest = index;
-  //             minDif = dif;
-  //           }
-  //         }
-  //         console.log("asdaf: " + closest);
-  //         this.setState({closest: closest });
-  //         console.log(this.state.bars[closest]);
-  //         //this.setState({closestBar:this.state.bars[closest]});
-  //         console.log("The Closest bar to our location is " + this.state.closestBar.name);
-  //         //this.clicked()
-  // }
-
-  //     PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
-  //         lat1 = this.Deg2Rad(lat1);
-  //         lat2 = this.Deg2Rad(lat2);
-  //         lon1 = this.Deg2Rad(lon1);
-  //         lon2 = this.Deg2Rad(lon2);
-  //         var R = 6371; // km
-  //         var x = (lon2 - lon1) * Math.cos((lat1 + lat2) / 2);
-  //         var y = (lat2 - lat1);
-  //         var d = Math.sqrt(x * x + y * y) * R;
-  //         return d;
-  //       }
-
-  //       Deg2Rad = (deg) => {
-  //         return deg * Math.PI / 180;
-  //       }
-
-  //       sendData = () => {
-  //         this.props.parentCallback("Hey Popsie, How’s it going?");
-  //    };
-
-//   clicked = () => {
-//     return this.history.pushState(null, "/map");
-
-//     //this.props.history.push("/map");
-//   };
+  onLogoutClick = e => {
+      e.preventDefault();
+      this.props.logoutUser();
+      this.setRedirect1()
+      
+  };
+  setRedirect1 = () => {
+    this.setState({
+      redirect1: true
+    });
+    
+  };
+  renderRedirect1 = () => {
+    if (this.state.redirect1) {
+      return <Redirect to="/signin" />;
+    }
+  };
 
   render() {
     return (
@@ -135,9 +63,26 @@ class Home extends Component {
         <Button onClick={this.setRedirect}>
         Start Bar Hop
         </Button>
+        <div className="container txt-alignment">
+            {this.renderRedirect1()} 
+            <p  className="bottomText pt-2" style={{ fontSize: 12, color: "#0A2463", fontStyle: "bold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.241)"}}><u onClick={this.onLogoutClick} className="newDestinationFont">Log Out?</u></p>
+        </div>
      </div>
     );
   }
 }
 
-export default Home;
+Home.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(Home);
+
+
+// export default Home;

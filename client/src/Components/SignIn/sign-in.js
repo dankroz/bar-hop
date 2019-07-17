@@ -8,7 +8,7 @@ import googlePlus from "./Google-Plus.png"
 export function Title(props) {
     return (
         <div>
-            <div class="container margin mx-auto d-flex justify-content-center">
+            <div className="container margin mx-auto d-flex justify-content-center">
                 <div className="row">
                     <div className="col-md-12 mb-5 pb-5 d-flex mx-auto justify-content-center">
                         <h1 className="">
