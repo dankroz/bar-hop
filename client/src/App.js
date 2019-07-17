@@ -17,18 +17,48 @@ import Welcome from "./Pages/welcome"
 //import API from "./Utils/API"
 //import ShopContext from "./context/shop-context";
 
+// Tying in Redux
+import jwt_decode from "jwt-decode";
+import setAuthToken from "./Utils/setAuthToken";
+import { setCurrentUser, logoutUser } from "./actions/authActions";
+// import PrivateRoute from "./Components/private-route/PrivateRoute";
+import Dashboard from "./Components/Dashboard/dashboard";
+
+// Redux
+import { Provider } from "react-redux";
+import store from "./store";
+
+// Check for token to keep user logged in
+if (localStorage.jwtToken) {
+  // Set auth token header auth
+  const token = localStorage.jwtToken;
+  setAuthToken(token);
+  // Decode token and get user info and exp
+  const decoded = jwt_decode(token);
+  // Set user and isAuthenticated
+  store.dispatch(setCurrentUser(decoded));
+// Check for expired token
+  const currentTime = Date.now() / 1000; // to get in milliseconds
+  if (decoded.exp < currentTime) {
+    // Logout user
+    store.dispatch(logoutUser());
+    // Redirect to login
+    window.location.href = "./signin";
+  }
+}
+
 class App extends Component {
   state = {
     bars: [{
-        name: "Pennovation",
-        latitude: 39.9414993,
-        longtitude: -75.2016702,
-        type: "School",
-        hint1: "This bar is not a bar ",
-        hint2: "This bar which is not a bar is located on Penn's campus",
-        image: "https://cdn.vox-cdn.com/thumbor/njfZKmII6kl20ucd2SsicIlHUDQ=/317x861:5760x3840/1200x800/filters:focal(2420x1460:3340x2380)/cdn.vox-cdn.com/uploads/chorus_image/image/52950799/1635_06.0.jpg",
-        street:"3401 Grays Ferry Ave",
-        cityZip:"Philadelphia, PA 19146",
+      name: "Pennovation",
+      latitude: 39.9414993,
+      longtitude: -75.2016702,
+      type: "School",
+      hint1: "This bar is not a bar ",
+      hint2: "This bar which is not a bar is located on Penn's campus",
+      image: "https://cdn.vox-cdn.com/thumbor/njfZKmII6kl20ucd2SsicIlHUDQ=/317x861:5760x3840/1200x800/filters:focal(2420x1460:3340x2380)/cdn.vox-cdn.com/uploads/chorus_image/image/52950799/1635_06.0.jpg",
+      street:"3401 Grays Ferry Ave",
+      cityZip:"Philadelphia, PA 19146",
       googleMaps:"https://www.google.com/maps/dir//Pennovation+Center,+3401+Grays+Ferry+Ave,+Philadelphia,+PA+19146/@39.9414993,-75.2016702,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c6c6604b976e85:0xf1832c05f0e57070!2m2!1d-75.1994815!2d39.9414993",
       hours: "M 12am T 12am W 12am Th 12am F 12am S 12am Su 12am",
       rating:"4.4",
@@ -361,20 +391,23 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
       <div className="phone">
         <Router>
           <div>
-            <Switch>
-              <Route exact path="/" component={Welcome} />
-              <Route exact path="/home" render={()=> <Home parentMethod={this.Loading} closestBar={this.state.closestBar} ready={this.state.ready} bars={this.state.bars}/>} />
-              <Route exact path="/signin" component={Signin} />
-              <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} Userlong={this.state.Userlong} Userlat={this.state.Userlat}/>}/>
-              <Route exact path="/help" render={()=> <ExtraHelp closestBar={this.state.closestBar} />} />
-              <Route exact path="/arrived" render={()=> <Arrived closestBar={this.state.closestBar} />} />
-              <Route exact path="/bardetails" render={()=> <BarDetails closestBar={this.state.closestBar} />} />
-              <Route exact path="/picpage" render={()=> <PicPage parentMethod1={this.randomWords} array={this.state.array} word={this.state.word}/>} />
-              <Route exact path="/identified" component={IdentifiedPic} />
-              <Route exact path="/leaderboard" component={Leaderboard} />
-              <Route component={NoMatch} />
-            </Switch>
+            <Provider store={store}>
+              <Switch>
+                <Route exact path="/" component={Welcome} />
+                <Route exact path="/home" render={()=> <Home parentMethod={this.Loading} closestBar={this.state.closestBar} ready={this.state.ready} bars={this.state.bars}/>} />
+                <Route exact path="/signin" component={Signin} />
+                <Route exact path="/signup" component={SignUp} />
+                <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} Userlong={this.state.Userlong} Userlat={this.state.Userlat}/>}/>
+                <Route exact path="/help" render={()=> <ExtraHelp closestBar={this.state.closestBar} />} />
+                <Route exact path="/arrived" render={()=> <Arrived closestBar={this.state.closestBar} />} />
+                <Route exact path="/bardetails" render={()=> <BarDetails closestBar={this.state.closestBar} />} />
+                <Route exact path="/picpage" render={()=> <PicPage parentMethod1={this.randomWords} array={this.state.array} word={this.state.word}/>} />
+                <Route exact path="/identified" component={IdentifiedPic} />
+                <Route exact path="/leaderboard" component={Leaderboard} />
+                <Route exact path="/dashboard" component={Dashboard} />
+                <Route component={NoMatch} />
+              </Switch>
+            </Provider>
           </div>
         </Router>
       </div>    
