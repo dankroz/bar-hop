@@ -25,20 +25,12 @@ function Modal(props) {
               </div>
               <div className="modal-footer">
                
-              <button
-                  {...props}
-                  type="button"
-                  className="btn btn-secondary"
-                  data-dismiss="modal"
-
-                >
-                  Give Up
-                </button>
                 <button
                   {...props}
                   type="button"
                   className="btn btn-primary"
                   data-dismiss="modal"
+                  style={{width: "100vw"}}
                 >
                   Close
                 </button>
