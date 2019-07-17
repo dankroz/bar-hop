@@ -43,22 +43,22 @@ if (localStorage.jwtToken) {
     // Logout user
     store.dispatch(logoutUser());
     // Redirect to login
-    window.location.href = "./login";
+    window.location.href = "./signin";
   }
 }
 
 class App extends Component {
   state = {
     bars: [{
-        name: "Pennovation",
-        latitude: 39.9414993,
-        longtitude: -75.2016702,
-        type: "School",
-        hint1: "This bar is not a bar ",
-        hint2: "This bar which is not a bar is located on Penn's campus",
-        image: "https://cdn.vox-cdn.com/thumbor/njfZKmII6kl20ucd2SsicIlHUDQ=/317x861:5760x3840/1200x800/filters:focal(2420x1460:3340x2380)/cdn.vox-cdn.com/uploads/chorus_image/image/52950799/1635_06.0.jpg",
-        street:"3401 Grays Ferry Ave",
-        cityZip:"Philadelphia, PA 19146",
+      name: "Pennovation",
+      latitude: 39.9414993,
+      longtitude: -75.2016702,
+      type: "School",
+      hint1: "This bar is not a bar ",
+      hint2: "This bar which is not a bar is located on Penn's campus",
+      image: "https://cdn.vox-cdn.com/thumbor/njfZKmII6kl20ucd2SsicIlHUDQ=/317x861:5760x3840/1200x800/filters:focal(2420x1460:3340x2380)/cdn.vox-cdn.com/uploads/chorus_image/image/52950799/1635_06.0.jpg",
+      street:"3401 Grays Ferry Ave",
+      cityZip:"Philadelphia, PA 19146",
       googleMaps:"https://www.google.com/maps/dir//Pennovation+Center,+3401+Grays+Ferry+Ave,+Philadelphia,+PA+19146/@39.9414993,-75.2016702,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c6c6604b976e85:0xf1832c05f0e57070!2m2!1d-75.1994815!2d39.9414993",
       hours: "M 12am T 12am W 12am Th 12am F 12am S 12am Su 12am",
       rating:"4.4",
