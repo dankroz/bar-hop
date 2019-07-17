@@ -191,7 +191,7 @@ class App extends Component {
       longtitude: -75.1669872,
       type: "Pub",
       hint1: "Oldest continually operating pub in the city",
-      hint2: "This bar shares its name with a common american delight",
+      hint2: "This bar opened its doors the same year when Abraham Lincoln was elected President ",
       image: "https://lh5.googleusercontent.com/p/AF1QipMctTH1ysVwdTNCg_sAakdu_kaFzNI09g98rgce=w408-h272-k-no",
       street:"1310 Drury St",
       cityZip:"Philadelphia, PA 19107",
