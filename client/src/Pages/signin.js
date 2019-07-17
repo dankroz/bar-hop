@@ -57,7 +57,7 @@ class Signin extends Component {
             <>
                 <Title>
                     Sign In
-            </Title>
+                </Title>
                 <TextArea
                     placeholder="Email"
                     type="text"

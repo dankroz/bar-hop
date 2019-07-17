@@ -8,7 +8,10 @@ import PasswordTextArea from "../Components/PasswordTextArea";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { signupUser } from "../actions/authActions";
+// import axios from "axios";
 // import classnames from "classnames";
+import API from "../Utils/API";
+
 
 class SignUp extends Component {
     constructor() {
@@ -17,7 +20,8 @@ class SignUp extends Component {
             name: "",
             email: "",
             password: "",
-            errors: {}
+            errors: {},
+            bars: []
         }
     }
 
@@ -51,8 +55,15 @@ class SignUp extends Component {
             password: this.state.password,
             password2: this.state.password2
         };
-        
+        this.loadBars();
         this.props.signupUser(newUser, this.props.history);
+    };
+
+    loadBars = () => {
+    API.getBars()
+      .then(res => this.setState({ bars: res.data }))
+      .catch(err => console.log(err));
+    console.log(this.state.bars);
     };
 
 
