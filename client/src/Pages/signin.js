@@ -1,29 +1,58 @@
 import React, { Component } from "react";
 import "../Components/Background/style.css";
-import SignInBtn from "../Components/Button/SignInBtn"
-import TextArea from "../Components/TextArea"
+import SignInBtn from "../Components/Button/SignInBtn";
+import TextArea from "../Components/TextArea";
 import { Facebook, Title } from "../Components/SignIn/sign-in";
+import PasswordTextArea from "../Components/PasswordTextArea";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { signinUser } from "../actions/authActions";
+
+
 
 
 
 class Signin extends Component {
-    state = {
-        email: "",
-        password: ""
+    constructor() {
+        super();
+        this.state = {
+            email: "",
+            password: "",
+            errors: {}
+        };
+    }
+
+    componentDidMount() {
+        // If logged in and user navigates to Login page, should redirect them to dashboard
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push("/dashboard");
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.isAuthenticated) {
+            this.props.history.push("/dashboard"); // push user to dashboard when they login
+        }
+        if (nextProps.errors) {
+            this.setState({
+                errors: nextProps.errors
+            });
+        }
     }
 
     handleInputChange = event => {
-        const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        });
+        this.setState({ [event.target.id]: event.target.value });
     };
 
     handleFormSubmit = event => {
         event.preventDefault();
-        console.log(this.state.email);
-        console.log(this.state.password);
+        const userData = {
+            email: this.state.email,
+            password: this.state.password
+        };
+        this.props.signinUser(userData);
     };
+
 
 
     render() {
@@ -35,19 +64,18 @@ class Signin extends Component {
                 <TextArea
                     placeholder="Email"
                     type="text"
-                    name="email"
+                    id="email"
                     value={this.state.email}
                     onChange={this.handleInputChange}
                 >
                 </TextArea>
-                <TextArea
+                <PasswordTextArea
                     placeholder="Password"
                     type="password"
-                    name="password"
+                    id="password"
                     value={this.state.password}
                     onChange={this.handleInputChange}
-                >
-                </TextArea>
+                />
                 <SignInBtn onClick={this.handleFormSubmit}>
                     Sign In
                 </SignInBtn>
@@ -59,4 +87,18 @@ class Signin extends Component {
 
 }
 
-export default Signin;
+Signin.propTypes = {
+    signinUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+
+export default connect(
+    mapStateToProps,
+    { signinUser }
+)(Signin);
