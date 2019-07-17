@@ -52,10 +52,10 @@ class Maps extends Component {
     console.log("LongEquals" + longEquals);
     console.log("LatEquals" + latEquals);
     if (
-      latEquals < 0.002 &&
-      latEquals > -0.002 &&
-      longEquals < 0.002 &&
-      longEquals > -0.002
+      (latEquals < 0.0005) &&
+      (latEquals > -0.0005) &&
+      (longEquals < 0.0005) &&
+      (longEquals > -0.0005)
     ) {
     //   alert("well this was fun");
       this.setRedirect();
@@ -81,7 +81,7 @@ class Maps extends Component {
     this.setState({
       redirect: true
     });
-    this.renderRedirect();
+    // this.renderRedirect();
   };
   renderRedirect = () => {
     if (this.state.redirect) {
@@ -131,8 +131,8 @@ class Maps extends Component {
         />
         {this.state.wrong === true && (<Modal  onClick={this.handleFormSubmit}/>)}
         <div>
-          {this.renderRedirect()}
-          <Button onClick={this.setRedirect}>Make A Guess</Button>
+         {this.renderRedirect()}
+          <Button onClick={this.Loading}>Make A Guess</Button>
         </div>
         <div className="container txt-alignment">
             {this.renderRedirect2()}

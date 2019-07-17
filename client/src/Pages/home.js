@@ -125,9 +125,9 @@ class Home extends Component {
     return (
         <div>
         {this.props.ready === true && <Opener>
-            Welcome to Bar Hop!
+            Find a New Bar!
             <p className="d-flex justify-content-center mt-4"style={{margintop: "30px", fontSize: 16, color: "#0A2463"}}>
-            Click the Button below to get started
+            Click the Button below to play a new route
             </p>
         </Opener>}
         

@@ -13,6 +13,7 @@ import Leaderboard from "./Pages/Leaderboard";
 import NoMatch from "./Pages/NoMatch";
 import Home from "./Pages/home";
 import IdentifiedPic from "./Pages/identifiedPic";
+import Welcome from "./Pages/welcome"
 //import API from "./Utils/API"
 //import ShopContext from "./context/shop-context";
 
@@ -110,19 +111,34 @@ class App extends Component {
       yelp: "https://www.yelp.com/biz/a-bar-philadelphia?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
     },
     {
-      name: "The Bards Irish Bar",
+      name: "Irish Pub",
       latitude: 39.9507451,
       longtitude: -75.176391,
       type: "Bar & Pub",
-      hint1: "The irish owner may or may not have a beard, but he's only one vowel short",
+      hint1: "This bar has 2 locations on Walnut, with this one being a Wharton staple",
       hint2: "This bar is known for giving guests a real taste of Ireland",
-      image: "http://www.bardsirishbar.com/images/thebards_exterior.jpg",
-      street:"2013 Walnut St",
+      image: "https://lh5.googleusercontent.com/p/AF1QipMV4f7PZd3piwie3sUBtC2Ph8XId0PCeqPOA1LU=w408-h323-k-no",
+      street:"2007 Walnut St",
       cityZip:"Philadelphia, PA 19103",
-      googleMaps:"https://www.google.com/maps/dir//The+Bards+Irish+Bar,+2013+Walnut+St,+Philadelphia,+PA+19103/@39.9507451,-75.176391,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c6c639d7fcd4eb:0x954b4bef07f358a2!2m2!1d-75.1742023!2d39.9507451",
+      googleMaps:"https://www.google.com/maps/place/Irish+Pub/@39.9508901,-75.1762207,17z/data=!3m1!4b1!4m5!3m4!1s0x89c6c637639fd55d:0x81918074c7302c22!8m2!3d39.950886!4d-75.174032",
+      hours: "M 2am T 2am W 2am Th 2am F 2am S 2am Su 2am",
+      rating:"3",
+      yelp: "https://www.yelp.com/biz/irish-pub-philadelphia?osq=Irish+Pub"
+    },
+    {
+      name: "Drinkers Pub",
+      latitude: 39.9519395,
+      longtitude: -75.1748219,
+      type: "Pub",
+      hint1: "This bar name describes a group of people who would go to this bar to do what the bar is named",
+      hint2: "People are called this if they are in AA (Alcoholics annonymous)",
+      image: "https://lh5.googleusercontent.com/p/AF1QipMV4f7PZd3piwie3sUBtC2Ph8XId0PCeqPOA1LU=w408-h323-k-no",
+      street:"1903 Chestnut St",
+      cityZip:"Philadelphia, PA 19103",
+      googleMaps:"https://www.google.com/maps/place/Drinker's+Pub/@39.9519395,-75.1748219,17z/data=!4m12!1m6!3m5!1s0x89c6c637639fd55d:0x81918074c7302c22!2sIrish+Pub!8m2!3d39.950886!4d-75.174032!3m4!1s0x0:0x393d02d9c97a0027!8m2!3d39.9521221!4d-75.1720713",
       hours: "M 2am T 2am W 2am Th 2am F 2am S 2am Su 2am",
       rating:"3.5",
-      yelp: "https://www.yelp.com/biz/the-bards-philadelphia?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+      yelp: "https://www.yelp.com/biz/drinkers-pub-philadelphia?osq=Drinkers"
     },
     {
       name: "Good Dog Bar",
@@ -153,6 +169,66 @@ class App extends Component {
       hours: "W 2am Th 2am F 2am S 2am",
       rating:"3.5",
       yelp: "https://www.yelp.com/biz/howl-at-the-moon-philadelphia-philadelphia?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+    },
+    {
+      name: "Time",
+      latitude: 39.9499482,
+      longtitude: -75.1641009,
+      type: "Jazz Bar",
+      hint1: "The name of this bar can fly without wings",
+      hint2: "The name of this bar is harmless... but it can kill you",
+      image: "https://lh5.googleusercontent.com/p/AF1QipNP8BSYTGZBTkVpIhgkJzA4GJIuRzGCmEwp_d4=w465-h240-k-no",
+      street:"1315 Sansom St",
+      cityZip:"Philadelphia, PA 19107",
+      googleMaps:"https://www.google.com/maps/place/Time/@39.9499482,-75.1641009,18.95z/data=!4m5!3m4!1s0x89c6c62f72041a8d:0x45e4fe1ab2b2a640!8m2!3d39.9500493!4d-75.1624957",
+      hours: "M 2am T 2am W 2am Th 2am F 2am S 2am Su 2am",
+      rating:"4",
+      yelp: "https://www.yelp.com/biz/time-philadelphia?osq=time+restaurant"
+    },
+    {
+      name: "McGillin's Olde Ale House",
+      latitude: 39.950177,
+      longtitude: -75.1669872,
+      type: "Pub",
+      hint1: "Oldest continually operating pub in the city",
+      hint2: "This bar shares its name with a common american delight",
+      image: "https://lh5.googleusercontent.com/p/AF1QipMctTH1ysVwdTNCg_sAakdu_kaFzNI09g98rgce=w408-h272-k-no",
+      street:"1310 Drury St",
+      cityZip:"Philadelphia, PA 19107",
+      googleMaps:"https://www.google.com/maps/place/McGillin's+Olde+Ale+House/@39.950177,-75.1669872,16z/data=!4m5!3m4!1s0x89c6c62f729f84a1:0xbaf1bbd50d3e7a47!8m2!3d39.950177!4d-75.1626098",
+      hours: "M 2am T 2am W 2am Th 2am F 2am S 2am Su 2am",
+      rating:"4",
+      yelp: "https://www.yelp.com/biz/mcgillins-olde-ale-house-philadelphia"
+    },
+    {
+      name: "Dirty Franks",
+      latitude: 39.9462784,
+      longtitude: -75.1646963,
+      type: "Local Watering Hole",
+      hint1: "Who dropped my hotdog on the floor?",
+      hint2: "This bar shares its name with a common american delight",
+      image: "https://video-images.vice.com/_uncategorized/1538672866507-VICE_dirtyfranks-2.jpeg",
+      street:"347 S 13th St",
+      cityZip:"Philadelphia, PA 19146",
+      googleMaps:"https://www.google.com/maps/dir//Dirty+Franks,+347+S+13th+St,+Philadelphia,+PA+19107/@39.9462784,-75.1646963,19z/data=!4m16!1m6!3m5!1s0x89c6c6245dce1c03:0x26f65f8548e1f772!2sDirty+Franks!8m2!3d39.9453778!4d-75.1628134!4m8!1m0!1m5!1m1!1s0x89c6c6245dce1c03:0x26f65f8548e1f772!2m2!1d-75.1628134!2d39.9453778!3e1",
+      hours: "W 2am Th 2am F 2am S 2am",
+      rating:"4",
+      yelp: "https://www.yelp.com/biz/dirty-franks-philadelphia"
+    },
+    {
+      name: "Bob and Barbara's Lounge",
+      latitude: 39.9440475,
+      longtitude: -75.1675479,
+      type: "PBR Bar",
+      hint1: "Located on one of the most famous streets in Philly, this bar serves a fine PBR",
+      hint2: "On Saturday night, you can see live jazz music",
+      image: "https://philly.thedrinknation.com/images/bars/1BobLounge.jpg",
+      street:"1509 South St",
+      cityZip:"Philadelphia, PA 19102",
+      googleMaps:"https://www.google.com/maps/dir//Bob+and+Barbara's+Lounge,+1509+South+St,+Philadelphia,+PA+19146/@39.9440475,-75.1697366,17z/data=!4m16!1m6!3m5!1s0x89c6c63cbe79df8b:0x68ad69806b42bc21!2sBob+and+Barbara's+Lounge!8m2!3d39.9440475!4d-75.1675479!4m8!1m0!1m5!1m1!1s0x89c6c63cbe79df8b:0x68ad69806b42bc21!2m2!1d-75.1675479!2d39.9440475!3e1",
+      hours: "W 2am Th 2am F 2am S 2am",
+      rating:"4",
+      yelp: "https://www.yelp.com/biz/bob-and-barbaras-philadelphia"
     },
   ],
     Userlong: "",
@@ -286,7 +362,8 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
         <Router>
           <div>
             <Switch>
-              <Route exact path="/" render={()=> <Home parentMethod={this.Loading} closestBar={this.state.closestBar} ready={this.state.ready} bars={this.state.bars}/>} />
+              <Route exact path="/" component={Welcome} />
+              <Route exact path="/home" render={()=> <Home parentMethod={this.Loading} closestBar={this.state.closestBar} ready={this.state.ready} bars={this.state.bars}/>} />
               <Route exact path="/signin" component={Signin} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} Userlong={this.state.Userlong} Userlat={this.state.Userlat}/>}/>

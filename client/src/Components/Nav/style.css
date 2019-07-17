@@ -1,0 +1,32 @@
+.container-bar{
+    width: 100vw;
+    height: 70px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+}
+.smallBox{
+    background-color: white;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.219);
+    width: 33.333%;
+    height: 70px;
+    border: none
+}
+
+.frontBox{
+    z-index: 4;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.233);
+
+}
+.specialClass{
+    width: 100vw;
+}
+
+.navIcons{
+    height: 40px;
+    margin-top: 5px;
+}
+.playBtn{
+    height: 38px;
+    margin-top: 7px;
+}
