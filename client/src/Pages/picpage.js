@@ -1,8 +1,19 @@
 import React, { Component } from "react";
 import Webcam from "react-webcam";
-import Button from "../Components/Button"
+import "../Components/Nav/style.css"
+// import Button from "../Components/Button"
 import Clarifai from "clarifai"
 import { withRouter } from 'react-router-dom'
+import { Redirect } from "react-router-dom";
+import hop from "../Components/Nav/hop.png";
+import trophy from "../Components/Nav/trophy.png";
+import play from "../Components/Nav/play.png";
+
+const buttonBackground = {
+  backgroundColor: "#0A2463",
+  color: "white",
+  borderRadius: 30
+};
 
 // const Clarifai = require('clarifai');
 // const Button = withRouter(({ history }) => (
@@ -12,6 +23,60 @@ import { withRouter } from 'react-router-dom'
 //     </Buttoner>
 //   ))
 class PicPage extends Component {
+  state = {
+    redirect1: false,
+    redirect2: false,
+    redirect3: false,
+    
+  };
+  
+  
+
+  // randomWords = () => {
+  // var choiceIndex = Math.floor(Math.random() * this.state.array.length)
+  // this.setState({word: this.state.array[choiceIndex]})
+  // console.log(this.state.word)
+  
+  // };
+  
+  
+
+  
+  
+  
+  setRedirect1 = () => {
+    this.setState({
+      redirect1: true
+    });
+  };
+  renderRedirect1 = () => {
+    if (this.state.redirect1) {
+      return <Redirect to="/home" />;
+    }
+  };
+  
+  setRedirect2 = () => {
+    this.setState({
+      redirect2: true
+    });
+  };
+  renderRedirect2 = () => {
+    if (this.state.redirect2) {
+      return <Redirect to="/leaderboard" />;
+    }
+  };
+
+  setRedirect3 = () => {
+    this.setState({
+      redirect3: true
+    });
+  };
+  renderRedirect3 = () => {
+    if (this.state.redirect3) {
+      return <Redirect to="/bardetails" />;
+    }
+  };
+
   setRef = webcam => {
     this.webcam = webcam;
   };
@@ -37,6 +102,7 @@ class PicPage extends Component {
           if (item.value > .8 && item.value < 1 && (/^(water\ssports|beer|bar\stap|juke\sbox|neon|shot\sglass|jersey|wine|shotski|tv|television)$/.test(item.name))) {
             console.log("did this work")
             console.log(item.name);
+            this.props.parentMethod1();
             return  this.props.history.push("/identified");
           } else {
             console.log("you failed at " + item.name)
@@ -73,11 +139,42 @@ class PicPage extends Component {
           // width={355}
           videoConstraints={videoConstraints}
         />
-        <Button onClick={this.capture}>Take Picture</Button>
+        <div className="text-center mx-auto">
+          <div className="panel panel-primary m-5" style={{ fontSize: 27, color: "white", opacity: "1", fontWeight: "bold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.247)" }}>Find a {this.props.word} at the bar. Take a picture for +50 points</div>
+        </div>
+        <div> 
+        <div className="text-center">
+          <button className="btn" style={buttonBackground} onClick={this.capture}>Take Picture <span  role="img" aria-label="photo">📸</span></button>
+        </div>
+          {/* {this.renderRedirect()}
+          <Button onClick={this.setRedirect1}>Go To Next Bar</Button> */}
+          <div className="container-bar container-fluid">
+            <div className="row specialClass">
+               
+            {this.renderRedirect2()}
+              <button onClick={this.setRedirect2} className="col-md-3 smallBox">
+              <img className="navIcons" src={trophy} alt={"trophy"} />
+              <p className="text-center text-dark mt-1" style={{ fontSize: 10, color: "#0A2463", opacity: .7, fontWeight: "bold"}}> Leaderboard</p>
+              </button>
+               
+              {this.renderRedirect3()}
+              <button onClick={this.setRedirect3} className="col-md-3 smallBox frontBox">
+              <img className="navIcons" src={hop} alt={"hop"} />
+              <p className="text-center text-dark mt-1" style={{ fontSize: 10, color: "#0A2463", opacity: .7, fontWeight: "bold"}}> Bar Details</p>
+              </button>
+              
+              {this.renderRedirect1()}
+              <button  onClick={this.setRedirect1} className="col-md-3 smallBox">
+              <img className="playBtn" src={play} alt={"play"} />
+              <p className="text-center text-dark mt-1" style={{ fontSize: 10, color: "#0A2463", opacity: .7, fontWeight: "bold"}}> Next Bar</p>
+              </button>
+              
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
-
-}
+};
 
 export default withRouter(PicPage);

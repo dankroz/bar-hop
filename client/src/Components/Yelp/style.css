@@ -1,0 +1,52 @@
+.img-style{
+    width: 100vw;
+    height: auto;
+    max-height: 155px;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header-container{
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.line{
+    width: 100% !important;
+    margin-right: 0px !important;
+}
+
+.rating-bg{
+    background-color: rgb(255, 217, 0);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.graymap-bg{
+    background-image: url(graymap.png);
+    height: 60px;
+    width: 70px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.247);
+    margin-right: 0px !important;
+}
+
+.bottomText{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 12px;
+    color: #0A2463;
+    font-size: 11px;
+}
+
+.txt-alignment{
+    display: flex;
+    justify-content: center;
+}
+
+.newDestinationFont{
+    color: #0A2463;
+}
