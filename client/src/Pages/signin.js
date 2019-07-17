@@ -67,7 +67,7 @@ class Signin extends Component {
                 >
                 </TextArea>
                 <PasswordTextArea
-                    placeholder="Password"
+                    placeholder="Password must be 6 characters long"
                     type="password"
                     id="password"
                     value={this.state.password}

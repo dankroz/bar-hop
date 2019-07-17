@@ -23,6 +23,7 @@ export const signinUser = userData => dispatch => {
     axios
         .post("/api/users/signin", userData)
         .then(res => {
+            console.log("this is the response: " + res);
             // Save to localStorage
             // Set token to localStorage
             const { token } = res.data;

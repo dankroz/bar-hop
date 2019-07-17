@@ -85,7 +85,7 @@ class SignUp extends Component {
                 >
                 </TextArea>
                 <PasswordTextArea
-                    placeholder="Password"
+                    placeholder="Password must be 6 characters long"
                     type="password"
                     id="password"
                     // error={errors.password}

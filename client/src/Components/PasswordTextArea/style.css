@@ -1,4 +1,4 @@
-textarea {
+input {
     border-radius: 35px;
     height: 40px;
     line-height: 35px;
@@ -12,20 +12,21 @@ textarea {
     padding-bottom: 0px;
     border: none;
     -moz-box-sizing:content-box;
-        -webkit-box-sizing:content-box;
-        border:#fff solid .2px;
-        box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.123);
+    -webkit-box-sizing:content-box;
+    border:#fff solid .2px;
+    box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.123);
 }
 
 ::placeholder { 
     color: rgb(2, 22, 68);
     opacity: 1; 
     text-align:center;
+    font-size: 13px;
   }
 
-textarea,
+input,
 [contenteditable] {
   color: #666;
   caret-color: rgba(10, 37, 99, 0.658);
-  font-size: 16px;
 }
+

@@ -5,8 +5,7 @@ function PasswordTextArea(props) {
 
     return (
         <div className="col-md-12 pb-2 d-flex mx-auto justify-content-center" id="area">
-            <textarea {...props} />
-            <label htmlFor="password"></label>
+            <input className="password" type="password" {...props} />
         </div>
     );
 }
