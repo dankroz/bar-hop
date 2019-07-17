@@ -1,81 +1,17 @@
-/* .newBody{
-    background-image: url("../img/wood.jpg");
-    background-attachment: fixed;
-    max-width: 100%;
-    height: auto !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-.img-container{
-    content:"";
-    height:100%; /* fix for mobile browser address bar appearing disappearing */
-    left:0;
-    right:0;
-    padding-bottom: 25px;
-    z-index:1; /* needed to keep in the background */
-    background: url("../img/mojito.jpg") center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
 .newBody:after{
-        content:"";
-        position:fixed; /* stretch a fixed position to the whole screen */
-        top:0;
-        height:200%; /* fix for mobile browser address bar appearing disappearing */
-        left:0;
-        right:0;
-        z-index:-1; /* needed to keep in the background */
-        background: url("../img/wood.jpg") center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-  }
-
-.beer-container{
     content:"";
-    padding-bottom: 55px;
-    padding-top: 20px;
-    height:100%; /* fix for mobile browser address bar appearing disappearing */
+    position:fixed; /* stretch a fixed position to the whole screen */
+    top:0;
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
     left:0;
     right:0;
-    z-index:1; /* needed to keep in the background */
-    background: url("../img/beer.jpg") center center;
+    z-index:-1; /* needed to keep in the background */
+    background: url("../img/wood.jpg") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
-.bar-container{
-    content:"";
-    height:100%; /* fix for mobile browser address bar appearing disappearing */
-    padding-bottom: 55px;
-    padding-top: 20px;
-    left:0;
-    right:0;
-    z-index:1; /* needed to keep in the background */
-    background: url("../img/drinking.jpg") center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-/* .white-container{
-    background-attachment: fixed;
-    width: 100vw;
-    height: auto;
-    margin-bottom: 100px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 50px !important;
-} */
 
 @media screen and (min-width: 900px) {
     .white-container{
