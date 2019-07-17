@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./assets/styles/style.css";
-import friends from "./assets/img/friends.jpg"
-import brewery from "./assets/img/brewery.jpg"
 import iphones from "./assets/img/iphones.png"
-import mug from "./assets/img/mug.jpg"
-import whiskey from "./assets/img/whiskey.jpg"
+// import friends from "./assets/img/friends.jpg"
+// import brewery from "./assets/img/brewery.jpg"
+// import mug from "./assets/img/mug.jpg"
+// import whiskey from "./assets/img/whiskey.jpg"
 
 
 class About extends Component {
@@ -15,7 +15,7 @@ class About extends Component {
                     <div className="container">
                         <div className="row fontStyle mx-auto my-auto d-flex justify-content-center">
                             <h1 className="mainHeader col-md-12 text-center text-light mt-5">A BAR SCAVENGER HUNT</h1>
-                            <h5 className="subtitle col-md-12 text-center text-light">For finding new drinking spots in Philadelphia</h5>
+                            <h5 className="subtitle col-md-12 text-center text-light">A game for finding new drinking spots</h5>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ class About extends Component {
                     </div>
                 </div>
 
-                <div className="beer-container">
+                {/* <div className="beer-container">
                     <div className="container">
                         <div className="row fontStyle mx-auto my-auto d-flex justify-content-center">
                             <h1 className="mainHeader col-md-12 text-center text-light mt-5">1 FIND LOCAL DRINKING SPOTS</h1>
@@ -100,7 +100,7 @@ class About extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="footer-container">
                     <footer id="sticky-footer" className="py-4 bg-light text-dark-50">
                         <div className="container text-center">

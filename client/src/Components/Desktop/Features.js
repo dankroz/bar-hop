@@ -11,6 +11,12 @@ class Features extends Component {
     render() {
         return (
             <div className="colorBody">
+            <div className="container">
+                        <div className="row fontStyle mx-auto my-auto d-flex justify-content-center">
+                            <h1 className="mainHeader col-md-12 text-center text-light mt-5">FEATURES</h1>
+                            {/* <h5 className="subtitle col-md-12 text-center text-light">Some of the main </h5> */}
+                        </div>
+                    </div>
                 <div className="color-container">
                     <div className="container mt-5 mx-auto my-auto d-flex justify-content-center">
                         <div className="row mt-5">
