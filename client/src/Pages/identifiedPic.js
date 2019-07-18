@@ -6,7 +6,6 @@ import API from "../Utils/API";
 import Axios from "axios";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import SmallBtn from "../Components/Button/SmallBtn";
 
 const background = {
     backgroundColor: "#0A2463",
@@ -35,6 +34,10 @@ class IdentifiedPic extends Component {
     
       componentDidMount() {
         this.loadUser();
+      }
+
+      componentDidUpdate() {
+          this.updateHighScore();
       }
     
       updateHighScore = () => {
@@ -70,7 +73,7 @@ class IdentifiedPic extends Component {
             Next Challenge
             </Button>
             </div>
-            <SmallBtn onClick={this.updateHighScore}></SmallBtn>
+          
             </>
         )
     }
