@@ -17,3 +17,12 @@
 .fontStyle{
     font-size: 50px;
 }
+
+.close{
+    right: 0;
+    margin-right: 50px !important;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 10;
+    color: white;
+}

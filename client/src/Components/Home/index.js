@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./logoutModal.css";
 import logo from "../Desktop/assets/img/barhopLogo.png"
 
 
@@ -7,9 +7,9 @@ import logo from "../Desktop/assets/img/barhopLogo.png"
 function Opener(props) {
     return (
         <div>
-            <div className="logoContainer">
+            <div className="logoContainer ">
                 <div className="pl-0" href="/">
-                    <img className="logo" src={logo} alt={"logo"} />
+                    <img className="d-flex justify-content-center mx-auto logo" src={logo} alt={"logo"} />
                 </div>
             </div>
             <h1 className="textContainer text-white">
