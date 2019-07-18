@@ -51,8 +51,8 @@ class App extends Component {
   state = {
     bars: [{
       name: "Pennovation",
-      latitude: 39.9414993,
-      longtitude: -75.2016702,
+      latitude: 39.9416787,
+      longtitude: -75.1994534,
       type: "School",
       hint1: "This bar is not a bar ",
       hint2: "This bar which is not a bar is located on Penn's campus",
@@ -212,7 +212,7 @@ class App extends Component {
       cityZip:"Philadelphia, PA 19107",
       googleMaps:"https://www.google.com/maps/place/Time/@39.9499482,-75.1641009,18.95z/data=!4m5!3m4!1s0x89c6c62f72041a8d:0x45e4fe1ab2b2a640!8m2!3d39.9500493!4d-75.1624957",
       hours: "M 2am T 2am W 2am Th 2am F 2am S 2am Su 2am",
-      rating:"4",
+      rating:"4.0",
       yelp: "https://www.yelp.com/biz/time-philadelphia?osq=time+restaurant"
     },
     {
@@ -221,13 +221,13 @@ class App extends Component {
       longtitude: -75.1669872,
       type: "Pub",
       hint1: "Oldest continually operating pub in the city",
-      hint2: "This bar shares its name with a common american delight",
+      hint2: "This bar opened its doors the same year when Abraham Lincoln was elected President ",
       image: "https://lh5.googleusercontent.com/p/AF1QipMctTH1ysVwdTNCg_sAakdu_kaFzNI09g98rgce=w408-h272-k-no",
       street:"1310 Drury St",
       cityZip:"Philadelphia, PA 19107",
       googleMaps:"https://www.google.com/maps/place/McGillin's+Olde+Ale+House/@39.950177,-75.1669872,16z/data=!4m5!3m4!1s0x89c6c62f729f84a1:0xbaf1bbd50d3e7a47!8m2!3d39.950177!4d-75.1626098",
       hours: "M 2am T 2am W 2am Th 2am F 2am S 2am Su 2am",
-      rating:"4",
+      rating:"4.0",
       yelp: "https://www.yelp.com/biz/mcgillins-olde-ale-house-philadelphia"
     },
     {
@@ -242,7 +242,7 @@ class App extends Component {
       cityZip:"Philadelphia, PA 19146",
       googleMaps:"https://www.google.com/maps/dir//Dirty+Franks,+347+S+13th+St,+Philadelphia,+PA+19107/@39.9462784,-75.1646963,19z/data=!4m16!1m6!3m5!1s0x89c6c6245dce1c03:0x26f65f8548e1f772!2sDirty+Franks!8m2!3d39.9453778!4d-75.1628134!4m8!1m0!1m5!1m1!1s0x89c6c6245dce1c03:0x26f65f8548e1f772!2m2!1d-75.1628134!2d39.9453778!3e1",
       hours: "W 2am Th 2am F 2am S 2am",
-      rating:"4",
+      rating:"4.0",
       yelp: "https://www.yelp.com/biz/dirty-franks-philadelphia"
     },
     {
@@ -257,7 +257,7 @@ class App extends Component {
       cityZip:"Philadelphia, PA 19102",
       googleMaps:"https://www.google.com/maps/dir//Bob+and+Barbara's+Lounge,+1509+South+St,+Philadelphia,+PA+19146/@39.9440475,-75.1697366,17z/data=!4m16!1m6!3m5!1s0x89c6c63cbe79df8b:0x68ad69806b42bc21!2sBob+and+Barbara's+Lounge!8m2!3d39.9440475!4d-75.1675479!4m8!1m0!1m5!1m1!1s0x89c6c63cbe79df8b:0x68ad69806b42bc21!2m2!1d-75.1675479!2d39.9440475!3e1",
       hours: "W 2am Th 2am F 2am S 2am",
-      rating:"4",
+      rating:"4.0",
       yelp: "https://www.yelp.com/biz/bob-and-barbaras-philadelphia"
     },
   ],

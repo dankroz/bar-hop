@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "../Components/Background/style.css";
-import TextArea from "../Components/TextArea"
+// import TextArea from "../Components/TextArea"
 import { Title } from "../Components/SignIn/sign-in";
 import SignInBtn from "../Components/Button/SignInBtn";
 import PasswordTextArea from "../Components/PasswordTextArea";
@@ -66,7 +66,7 @@ class SignUp extends Component {
                     Sign Up
                     </Title>
 
-                <TextArea
+                <PasswordTextArea
                     placeholder="Name"
                     type="text"
                     id="name"
@@ -74,8 +74,8 @@ class SignUp extends Component {
                     value={this.state.name}
                     onChange={this.handleInputChange}
                 >
-                </TextArea>
-                <TextArea
+                </PasswordTextArea>
+                <PasswordTextArea
                     placeholder="Email"
                     type="text"
                     id="email"
@@ -83,9 +83,9 @@ class SignUp extends Component {
                     value={this.state.email}
                     onChange={this.handleInputChange}
                 >
-                </TextArea>
+                </PasswordTextArea>
                 <PasswordTextArea
-                    placeholder="Password must be 6 characters long"
+                    placeholder="Password"
                     type="password"
                     id="password"
                     // error={errors.password}

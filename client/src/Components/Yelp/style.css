@@ -3,6 +3,8 @@
     height: auto;
     max-height: 155px;
     overflow: hidden;
+    object-fit: cover;
+    object-position: 50% 50%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
