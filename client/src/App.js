@@ -55,8 +55,8 @@ class App extends Component {
   state = {
     bars: [{
       name: "Pennovation",
-      latitude: 39.9324564,
-      longtitude: -75.1895462,
+      latitude: 39.9416787,
+      longtitude: -75.1994534,
       type: "School",
       hint1: "This bar is not a bar ",
       hint2: "This bar which is not a bar is located on Penn's campus",
