@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import "./assets/styles/style.css";
 import "./assets/styles/Features.css";
-import mobile from "./assets/img/barhop.png"
+import map from "./assets/img/map.png"
 import yelp from "./assets/img/yelp.png"
 import leaderboard from "./assets/img/leaderboard.png"
 import challenge from "./assets/img/challenge.png"
@@ -21,13 +21,13 @@ class Features extends Component {
                     <div className="container mt-5 mx-auto my-auto d-flex justify-content-center">
                         <div className="row mt-5">
                             <div className="col-lg-12 mx-auto my-auto d-flex justify-content-center">
-                                <img className="shadow-lg friendsImg" src={mobile} alt={"mobile"} />
+                                <img className="shadow-lg friendsImg" src={map} alt={"map"} />
                             </div>
                             <div className="col-lg-12 mx-auto my-auto d-flex justify-content-center">
                             <h1 className=" secondHeader
                             col-md-12 text-center mt-4">Mapping Your Course</h1>
                             </div>
-                            <div className="col-lg-12 mx-auto my-auto d-flex justify-content-center">
+                            <div className="col-lg-8 col-md-12 mx-auto my-auto d-flex justify-content-center">
                                 <p className="pageText text-center fontStyle mr-4 ml-4 pr-4 pl-4 mt-3">A hint will guide you towards the right location. Continue to check your progress as you walk. You will get an alert when you have arrived at the correct bar.</p>
                             </div>
                         </div>
@@ -41,7 +41,7 @@ class Features extends Component {
                             <h1 className=" secondHeader
                             col-md-12 text-center mt-4">Find the Bar</h1>
                             </div>
-                            <div className="col-lg-12 mx-auto my-auto d-flex justify-content-center">
+                            <div className="col-lg-8 col-md-12 mx-auto my-auto d-flex justify-content-center">
                                 <p className="pageText text-center fontStyle mr-4 ml-4 pr-4 pl-4 mt-3">Once you enter the bars radius, you will recieve information about the bar. This includes the bars address, hours, and yelp rating.</p>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ class Features extends Component {
                             <h1 className=" secondHeader
                             col-md-12 text-center mt-4">Complete Challenges</h1>
                             </div>
-                            <div className="col-lg-12 mx-auto my-auto d-flex justify-content-center">
+                            <div className="col-lg-8 col-md-12 mx-auto my-auto d-flex justify-content-center">
                                 <p className="pageText text-center fontStyle mr-4 ml-4 pr-4 pl-4 mt-3">Go head to head with your frineds to see who can collect the most points. You increase your score by completing mini challenges.</p>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ class Features extends Component {
                             <h1 className=" secondHeader
                             col-md-12 text-center mt-4">Compete with Friends</h1>
                             </div>
-                            <div className="col-lg-12 mx-auto my-auto d-flex justify-content-center">
+                            <div className="col-lg-8 col-md-12 mx-auto my-auto d-flex justify-content-center">
                                 <p className="pageText text-center fontStyle mr-4 ml-4 pr-4 pl-4 mt-3">As you collect points you will climb the leaderboard. Keep playing to see if you can break into the top 5.</p>
                             </div>
                         </div>

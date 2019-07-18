@@ -39,8 +39,9 @@ class Leaderboard extends Component {
 
   getUserScore = () => {
     const id = this.props.auth.user.id
+    // console.log(id)
     API.getUser(id)
-      .then(res => this.setState({userscore: (res.data.highscore + 100)}))
+      .then(res => this.setState({userscore: (res.data.highscore)}))
   }
 
   checkscorees = () => {
