@@ -3,8 +3,10 @@ import "./style.css"
 
 export function Table({ children }) {
     return  (
-        <div className="table-wrapper-scroll-y my-custom-scrollbar">
+        <div className="container wrappingContainer d-flex justify-content-center mx-auto mb-5">
+        <div id="table" className="table-wrapper-scroll-y my-custom-scrollbar">
             <table> {children}</table>
+        </div>
         </div>
     )  
 }
