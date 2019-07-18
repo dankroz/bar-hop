@@ -4,11 +4,12 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 require("dotenv").config();
+const cors = require("cors");
 
 const bodyParser = require("body-parser");
 const passport = require("passport");
 
-
+app.use(cors())
 // Passport middleware
 app.use(passport.initialize());
 

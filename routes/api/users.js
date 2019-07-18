@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
@@ -8,6 +7,21 @@ const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 // Load User model
 const User = require("../../models/users");
+const userController = require("../../controllers/userController");
+
+router.route("/")
+  .get(userController.findAll);
+
+router.route("/:id")
+  .get(userController.findById);
+
+router.put("/:id", function(req, res, next){
+    User.findByIdAndUpdate({ _id: req.params.id }, req.body).then(function() {
+        User.findOne({ _id: req.params.id }).then(function(user) {
+            res.send(user);
+        })
+    })
+})
 
 // @route POST api/users/register
 // @desc Register user
@@ -95,6 +109,7 @@ router.post("/signin", (req, res) => {
     });
 });
 
+router.put("/:id")
 
 
 module.exports = router;
