@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import "../Components/Background/style.css";
 import {
- 
-  
-  Operation,
   BottomLink
 } from "../Components/Yelp";
 import Button from "../Components/Button";
@@ -97,7 +94,15 @@ class BarDetails extends Component {
                 </div>
             </div>
 
-          <Operation />
+            <div className="details-container container mt-2">
+                <div className="row">
+                    <div className="container col-sm-12">
+                        <div className="col-sm-6 mt-3" style={{ fontSize: 14, color: "#0A2463", opacity: ".3", fontWeight: "bold" }}>OPERATION</div>
+                        <div className="col-sm-6 mt-1" style={{ fontSize: 14, color: "#0A2463", opacity: "1"}}><b>Open • </b>{this.props.closestBar.hours}</div>
+                    </div>
+
+                </div>
+            </div>
 
           <div>
             {this.renderRedirect()}

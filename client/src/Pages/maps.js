@@ -16,7 +16,8 @@ class Maps extends Component {
     redirect: false,
     redirect1: false,
     redirect2:false,
-    wrong: false
+    wrong: false,
+    geoNoWork: false,
   };
 
 
@@ -24,6 +25,17 @@ class Maps extends Component {
   componentDidMount() {
     //console.log(this.props.Userlong)
   }
+
+  setRedirect5 = () => {
+    this.setState({
+      geoNoWork: true
+    });
+  };
+  renderRedirect5 = () => {
+    if (this.state.geoNoWork) {
+      return <Redirect to="/nolocation" />;
+    }
+  };
 
   Loading = () => {
     // HTML5/W3C Geolocation
@@ -110,15 +122,18 @@ class Maps extends Component {
     }
   };
 
-  clicked = () => {
-    return this.props.history.push("/map");
-  };
+  // clicked = () => {
+  //   return this.props.history.push("/map");
+  // };
 
   render() {
-    console.log("The Bar: " + this.props.closestBar.hint2);
+    if(this.props.closestBar === ""){
+      this.setRedirect5();
+    };
     console.log("The Baraa: " + this.props.closestBar.latitude);
     return (
       <div className="global">
+        {this.renderRedirect5()}
         <div>
           {this.renderRedirect1()}
           <SmallBtn onClick={this.setRedirect1}>?</SmallBtn>
