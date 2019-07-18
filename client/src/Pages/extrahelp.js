@@ -55,7 +55,7 @@ class ExtraHelp extends Component {
         const id = this.props.auth.user.id
         console.log(id)
         API.getUser(id)
-          .then(res => this.setState({userscore: (res.data.highscore - 25)}))
+          .then(res => this.setState({userscore: (res.data.highscore - 10)}))
           // .then(this.setState({ highscore: (this.props.auth.user.highscore + 88) }))
       }
     
