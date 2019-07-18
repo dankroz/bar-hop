@@ -15,6 +15,7 @@ import Home from "./Pages/home";
 import IdentifiedPic from "./Pages/identifiedPic";
 import Welcome from "./Pages/welcome"
 import NoLocation from "./Pages/nolocation";
+import Error from "./Pages/404";
 //import API from "./Utils/API"
 //import ShopContext from "./context/shop-context";
 
@@ -24,6 +25,8 @@ import setAuthToken from "./Utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 // import PrivateRoute from "./Components/private-route/PrivateRoute";
 import Dashboard from "./Components/Dashboard/dashboard";
+
+
 
 // Redux
 import { Provider } from "react-redux";
@@ -291,14 +294,7 @@ class App extends Component {
 //       })
 //   };
 
-//   loadBars = () => {
-//     API.getBars()
-//       .then(res => this.setState({ bars: res.data }))
-//       .catch(err => console.log(err));
-//     console.log(this.state.bars);
-//     // console.log(this.getLocation())
-//     this.loadBars1();
-//   };
+
 
 // loadBars1 = () => {
 //     API.getBars()
@@ -411,7 +407,8 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
                 <Route exact path="/identified" render={()=> <IdentifiedPic word={this.state.word} />} />
                 <Route exact path="/leaderboard" component={Leaderboard} />
                 <Route exact path="/dashboard" component={Dashboard} />
-                <Route component={NoMatch} />
+                <Route exact path="/nomatch" component={NoMatch} />
+                <Route component={Error} />
               </Switch>
             </Provider>
           </div>

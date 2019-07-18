@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import Button from "../Components/Button";
 // import { generateKeyPair } from "crypto";
-import Opener from "../Components/Home/index"
+import Opener from "../Components/Home/index";
+import API from "../Utils/API";
+import Axios from "axios";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 const background = {
     backgroundColor: "#0A2463",
@@ -13,9 +17,45 @@ const background = {
 }
 
 class IdentifiedPic extends Component {
+    state = {
+        userscore: 0
+    }
     clicked = () => {
         return this.props.history.push("/picpage");
     }
+
+    loadUser = () => {
+        const id = this.props.auth.user.id
+        console.log(id)
+        API.getUser(id)
+          .then(res => this.setState({userscore: (res.data.highscore + 50)}))
+          // .then(this.setState({ highscore: (this.props.auth.user.highscore + 88) }))
+      }
+    
+      componentDidMount() {
+        this.loadUser();
+      }
+
+      componentDidUpdate() {
+          this.updateHighScore();
+      }
+    
+      updateHighScore = () => {
+        const id = this.props.auth.user.id
+        console.log(id);
+        console.log(this.state.userscore);
+        const newHighScore = {
+          "highscore": this.state.userscore
+        }
+        console.log(newHighScore)
+        Axios.put("http://localhost:3001/api/users/" + id, newHighScore)
+        .then(Axios.get("http://localhost:3001/api/users/" + id)
+          .then(res => console.log("updated: " + res.data.highscore))
+        )
+      }
+
+
+
     render() {
         return (
             <>
@@ -33,10 +73,19 @@ class IdentifiedPic extends Component {
             Next Challenge
             </Button>
             </div>
+          
             </>
         )
     }
 
 }
 
-export default IdentifiedPic;
+IdentifiedPic.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+export default connect(
+  mapStateToProps
+)(IdentifiedPic);

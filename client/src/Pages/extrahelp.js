@@ -3,6 +3,10 @@ import SmallBtn from "../Components/Button/SmallBtn";
 import Jumbotron from "../Components/Jumbotron/index";
 import Button from "../Components/Button";
 import { Redirect } from "react-router-dom";
+import API from "../Utils/API";
+import Axios from "axios";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 // import { generateKeyPair } from "crypto";
 
 const background = {
@@ -17,11 +21,24 @@ const background = {
 class ExtraHelp extends Component {
     state = {
         redirect: false,
-        addHint: false
+        addHint: false,
+        userscore: 0
       };
       addHint = () => {
         this.setState({addHint: true})
-        
+        // updateHighScore = () => {
+          const id = this.props.auth.user.id
+          console.log(id);
+          console.log(this.state.userscore);
+          const newHighScore = {
+            "highscore": this.state.userscore
+          }
+          console.log(newHighScore)
+          Axios.put("http://localhost:3001/api/users/" + id, newHighScore)
+          .then(Axios.get("http://localhost:3001/api/users/" + id)
+            .then(res => console.log("updated: " + res.data.highscore))
+          )
+        // }
       }
       setRedirect = () => {
         this.setState({
@@ -33,6 +50,32 @@ class ExtraHelp extends Component {
           return <Redirect to="/map" />;
         }
       };
+
+      loadUser = () => {
+        const id = this.props.auth.user.id
+        console.log(id)
+        API.getUser(id)
+          .then(res => this.setState({userscore: (res.data.highscore - 10)}))
+          // .then(this.setState({ highscore: (this.props.auth.user.highscore + 88) }))
+      }
+    
+      componentDidMount() {
+        this.loadUser();
+      }
+    
+      updateHighScore = () => {
+        const id = this.props.auth.user.id
+        console.log(id);
+        console.log(this.state.userscore);
+        const newHighScore = {
+          "highscore": this.state.userscore
+        }
+        console.log(newHighScore)
+        Axios.put("http://localhost:3001/api/users/" + id, newHighScore)
+        .then(Axios.get("http://localhost:3001/api/users/" + id)
+          .then(res => console.log("updated: " + res.data.highscore))
+        )
+      }
   render() {
     return (
       <div style={background}>
@@ -56,4 +99,12 @@ class ExtraHelp extends Component {
   }
 }
 
-export default ExtraHelp;
+ExtraHelp.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+export default connect(
+  mapStateToProps
+)(ExtraHelp);
