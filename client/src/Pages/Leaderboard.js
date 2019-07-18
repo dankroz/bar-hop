@@ -100,7 +100,7 @@ class Leaderboard extends Component {
           <h3>No Results to Display</h3>
         )}
 
-        <h3 className="text-center">Here's your current score: {this.props.auth.user.name}</h3>
+        <h3 className="text-center">Here's your current score {this.props.auth.user.name}!</h3>
         <h4 className="text-center">{this.state.userscore}</h4>
 
         {this.renderRedirect()}

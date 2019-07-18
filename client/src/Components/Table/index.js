@@ -3,7 +3,7 @@ import "./style.css"
 
 export function Table({ children }) {
     return  (
-        <div>
+        <div className="table-wrapper-scroll-y my-custom-scrollbar">
             <table> {children}</table>
         </div>
     )  
@@ -23,12 +23,13 @@ export function TableHeader({ children }) {
 
 export function TableData({ children }) {
     return (
-        <td className="text-center">{children}</td>
+        <td className="text-center"><strong>{children}</strong></td>
     )
 }
 
 export function TableBody({ children }) {
     return (
-        <tbody> {children} </tbody>
+        
+        <tbody className="scrollit"> {children} </tbody>
     )
 }
