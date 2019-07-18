@@ -6,6 +6,7 @@ import API from "../Utils/API";
 import Axios from "axios";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 const background = {
     backgroundColor: "#0A2463",
@@ -18,7 +19,8 @@ const background = {
 
 class IdentifiedPic extends Component {
     state = {
-        userscore: 0
+        userscore: 0,
+        redirect: false
     }
     clicked = () => {
         return this.props.history.push("/picpage");
@@ -34,6 +36,7 @@ class IdentifiedPic extends Component {
     
       componentDidMount() {
         this.loadUser();
+        
       }
 
       componentDidUpdate() {
@@ -55,6 +58,19 @@ class IdentifiedPic extends Component {
       }
 
 
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    });
+    this.props.parentMethod1()
+  };
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to="/picpage" />;
+    }
+  };
+
+
 
     render() {
         return (
@@ -69,7 +85,8 @@ class IdentifiedPic extends Component {
             + 50 POINTS
             </p>
             </Opener>
-            <Button onClick={this.clicked}>
+            {this.renderRedirect()}
+            <Button onClick={this.setRedirect}>
             Next Challenge
             </Button>
             </div>

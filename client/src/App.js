@@ -404,7 +404,7 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
                 <Route exact path="/arrived" render={()=> <Arrived closestBar={this.state.closestBar} />} />
                 <Route exact path="/bardetails" render={()=> <BarDetails closestBar={this.state.closestBar} />} />
                 <Route exact path="/picpage" render={()=> <PicPage parentMethod1={this.randomWords} array={this.state.array} word={this.state.word}/>} />
-                <Route exact path="/identified" render={()=> <IdentifiedPic word={this.state.word} />} />
+                <Route exact path="/identified" render={()=> <IdentifiedPic  parentMethod1={this.randomWords} word={this.state.word} />} />
                 <Route exact path="/leaderboard" component={Leaderboard} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/nomatch" component={NoMatch} />
