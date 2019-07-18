@@ -8,7 +8,6 @@ import { connect } from "react-redux";
 import API from "../Utils/API";
 import Axios from "axios";
 // import SmallBtn from "../Components/Button/SmallBtn";
-import SignInBtn from "../Components/Button/SignInBtn";
 // import Axios from "axios";
 
 
@@ -39,6 +38,10 @@ class Arrived extends Component {
 
   componentDidMount() {
     this.loadUser();
+  }
+
+  componentDidUpdate() {
+    this.updateHighScore();
   }
 
   updateHighScore = () => {
@@ -86,7 +89,6 @@ class Arrived extends Component {
           {this.renderRedirect()}
           <Button onClick={this.setRedirect}>Next</Button>
           
-          <SignInBtn onClick={this.updateHighScore}>Check your Score</SignInBtn>
         </div>
       </>
     );

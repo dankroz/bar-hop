@@ -5,14 +5,16 @@ import Button from "../Components/Button"
 import { Redirect } from "react-router-dom";
 import API from "../Utils/API";
 import { Table, TableHeader, TableRow, TableData, TableBody } from "../Components/Table";
-
-
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 class Leaderboard extends Component {
 
   state = {
     redirect: false,
-    highscores: []
+    highscores: [],
+    leaders: [],
+    userscore: 0
   }
 
   setRedirect = () => {
@@ -31,6 +33,17 @@ class Leaderboard extends Component {
     setTimeout(this.getLeaders, 1000);
   }
 
+  componentDidUpdate() {
+    this.getUserScore();
+  }
+
+  getUserScore = () => {
+    const id = this.props.auth.user.id
+    console.log(id)
+    API.getUser(id)
+      .then(res => this.setState({userscore: (res.data.highscore + 100)}))
+  }
+
   checkscorees = () => {
     console.log("highscores: " + this.state.highscores);
   }
@@ -44,12 +57,14 @@ class Leaderboard extends Component {
       })
   }
 
+
+
   getLeaders = () => {
     let players = this.state.highscores;
     console.log(players)
     
-    let leaders = (players.sort((player1, player2) => player2.highscore - player1.highscore));
-    console.log(leaders)
+    this.setState({leaders: players.sort((player1, player2) => player2.highscore - player1.highscore)});
+    console.log(this.state.leaders)
   }
 
   render() {
@@ -58,34 +73,52 @@ class Leaderboard extends Component {
         <div className="title">
           <h1 style={{ color: "#0A2463" }}>Leaderboard</h1>
         </div>
-        <Table>
-          <TableBody>
-            <TableRow>
-              <TableHeader>
-                Name
-              </TableHeader>
-              <TableHeader>
-                Score
-              </TableHeader>
-            </TableRow>
-            <TableRow>
-              <TableData>
-                  lkjlkjlk  
-              </TableData>
-              <TableData>
-                  dflkdflk
-              </TableData>
-            </TableRow>
-          </TableBody>
-        </Table>
+        {this.state.leaders.length ? (
+          <Table>
+            <TableBody>
+              <TableRow>
+                <TableHeader>
+                  Name
+                </TableHeader>
+                <TableHeader>
+                  Score
+                </TableHeader>
+              </TableRow>
+            {this.state.leaders.map(user => (
+              <TableRow key={user._id}>
+                <TableData>
+                  {user.name}
+                </TableData>
+                <TableData>
+                  {user.highscore}
+                </TableData>
+              </TableRow>
+            ))}
+            </TableBody>
+          </Table>
+        ) : (
+          <h3>No Results to Display</h3>
+        )}
+
+        <h3 className="text-center">Here's your current score: {this.props.auth.user.name}</h3>
+        <h4 className="text-center">{this.state.userscore}</h4>
+
         {this.renderRedirect()}
         <Button onClick={this.setRedirect}>
           Back
-                </Button>
+        </Button>
       </div>
     )
   }
 
 }
 
-export default Leaderboard;
+Leaderboard.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+export default connect(
+  mapStateToProps
+)(Leaderboard);
