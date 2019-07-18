@@ -106,7 +106,7 @@ class PicPage extends Component {
             return  this.props.history.push("/identified");
           } else {
             console.log("you failed at " + item.name)
-            this.props.history.push("/error");
+            this.props.history.push("/nomatch");
           }
         };
       })

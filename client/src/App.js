@@ -15,6 +15,7 @@ import Home from "./Pages/home";
 import IdentifiedPic from "./Pages/identifiedPic";
 import Welcome from "./Pages/welcome"
 import NoLocation from "./Pages/nolocation";
+import Error from "./Pages/404";
 //import API from "./Utils/API"
 //import ShopContext from "./context/shop-context";
 
@@ -411,7 +412,8 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
                 <Route exact path="/identified" render={()=> <IdentifiedPic word={this.state.word} />} />
                 <Route exact path="/leaderboard" component={Leaderboard} />
                 <Route exact path="/dashboard" component={Dashboard} />
-                <Route component={NoMatch} />
+                <Route exact path="/nomatch" component={NoMatch} />
+                <Route component={Error} />
               </Switch>
             </Provider>
           </div>
