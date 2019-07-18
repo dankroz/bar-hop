@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
- 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+import Marker from "../Marker/Marker"
+import nav from "../Nav/hop.png"
 
-// let long23;
-// let lat23;
- 
 class SimpleMap extends Component {
   state = {
     center: {
@@ -15,43 +12,8 @@ class SimpleMap extends Component {
     zoom: 15
   };
 
-  // constructor(){
-  //   super()
-  //   this.getLocation()
-    
-  // }
-
-
-
-
-  
-  
- 
-
-
-  // getLocation = () => {
-  //     navigator.geolocation.getCurrentPosition(function(position) {
-  //       //console.log("Hello: " + position.coords.latitude, position.coords.longitude); 
-      
-  //       long23 = position.coords.longitude
-  //       lat23 = position.coords.latitude
-        
-
-  //        console.log("Lat23:" + long23 + ", Long23:" + lat23);
-        
-        
-  //       })
-  //       this.stateChange()
-  // };
-
-  // stateChange = () => {
-  //   this.State =  this.state.center{lat: lat23, lng: long23};
-    
-  // }
-
-  
- 
   render() {
+    console.log(this.props.Userlat)
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
@@ -61,10 +23,10 @@ class SimpleMap extends Component {
           defaultCenter={this.state.center}
           defaultZoom={this.state.zoom}
         >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
+          <Marker
+            lat={this.props.Userlat}
+            lng={this.props.Userlong}
+            name="My Marker"
           />
         </GoogleMapReact>
         
