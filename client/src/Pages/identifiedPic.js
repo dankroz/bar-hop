@@ -35,7 +35,6 @@ class IdentifiedPic extends Component {
     
       componentDidMount() {
         this.loadUser();
-        this.updateHighScore();
       }
     
       updateHighScore = () => {
