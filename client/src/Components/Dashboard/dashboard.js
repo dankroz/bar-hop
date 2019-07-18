@@ -20,7 +20,6 @@ class Dashboard extends Component {
 
     render() {
         const { user } = this.props.auth;
-        const { client } = this.props.auth;
         return (
             <div style={{ height: "75vh" }} className="container valign-wrapper">
                 <div className="row">
@@ -28,7 +27,7 @@ class Dashboard extends Component {
                         <h4>User Details</h4>
                         <ul>
                             <li> {user.name.split(" ")[0]} </li>
-                            <li> {client} </li>
+                            <li> {user.highscore} </li>
                         </ul>
                         <button
                             style={{

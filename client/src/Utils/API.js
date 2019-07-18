@@ -16,5 +16,15 @@ export default {
   // Saves a book to the database
   saveBar: function(barData) {
     return axios.post("/api/bars", barData);
+  }, 
+  getUsers: function() {
+    return axios.get("/api/users")
+  }, 
+  updateUser: function(id, content) {
+    console.log(content);
+    return axios.put("/api/users/" + id, content)
+  }, 
+  getUser: function(id) {
+    return axios.get("api/users/" + id)
   }
 };

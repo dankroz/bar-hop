@@ -26,6 +26,8 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 // import PrivateRoute from "./Components/private-route/PrivateRoute";
 import Dashboard from "./Components/Dashboard/dashboard";
 
+
+
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
@@ -292,14 +294,7 @@ class App extends Component {
 //       })
 //   };
 
-//   loadBars = () => {
-//     API.getBars()
-//       .then(res => this.setState({ bars: res.data }))
-//       .catch(err => console.log(err));
-//     console.log(this.state.bars);
-//     // console.log(this.getLocation())
-//     this.loadBars1();
-//   };
+
 
 // loadBars1 = () => {
 //     API.getBars()
