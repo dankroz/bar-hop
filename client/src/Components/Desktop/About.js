@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./assets/styles/about.css";
+import "./assets/styles/About.css";
 import iphones from "./assets/img/iphones.png"
 import friends from "./assets/img/friends.jpg"
 // import brewery from "./assets/img/brewery.jpg"
