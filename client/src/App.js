@@ -268,7 +268,7 @@ class App extends Component {
     closestBar: "",
     ready:"false",
     array: ["jersey", "television", "juke box", "beer tap", "shot glass", "shotski", "wine glass", "neon sign"],
-    word: "beer",
+    word: "beer"
   }
 
   
