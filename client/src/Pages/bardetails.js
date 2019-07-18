@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import "../Components/Background/style.css";
-import {
-  BottomLink
-} from "../Components/Yelp";
 import Button from "../Components/Button";
 import { Redirect } from "react-router-dom";
 import "../Components/Yelp/style.css";
@@ -114,7 +111,6 @@ class BarDetails extends Component {
             </Button>
           </div>
 
-          <BottomLink />
         </div>
       </div>
     );
