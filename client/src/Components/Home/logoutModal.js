@@ -1,16 +1,27 @@
 import React from "react";
 import "./style.css";
 
-function Modal(props) {
+
+
+function LogoutModal(props) {
   return (
     <div className="container">
       <div className="align-modal">
         <div className="modal" tabIndex="-1" role="dialog">
           <div className="modal-dialog" role="document">
+            {/* {/* <button
+              type="button"
+              className="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              onClick={this.changeGear()}  
+            > 
+              <span aria-hidden="true">&times;</span>
+            </button> */}
             <div className="modal-content text-white text-center d-flex mx-auto justify-content-center">
-                <h2>Keep Going</h2>
+              <h2>Log Out</h2>
               <div className="modal-body text-center">
-                <p>Sorry. You're not there yet!</p>
+                <p>Are you sure you want to stop playing?</p>
                 <button
                   {...props}
                   type="button"
@@ -18,9 +29,9 @@ function Modal(props) {
                   data-dismiss="modal"
                   // style={{width: "100vw"}}
                 >
-                  Close
+                  Log Out
                 </button>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -28,4 +39,4 @@ function Modal(props) {
     </div>
   );
 }
-export default Modal;
+export default LogoutModal;

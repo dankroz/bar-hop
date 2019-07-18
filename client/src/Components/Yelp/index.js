@@ -74,7 +74,7 @@ export function Operation(props) {
 export function BottomLink(props) {
     return (
         <div className="container txt-alignment">
-            <p className="bottomText pt-2">Don't like this location? <a className="" href="/"><u className="newDestinationFont">Find new destination</u></a></p>
+            <p className="bottomText pt-2">Don't like this location? <a className="" href="/home"><u className="newDestinationFont">Find new destination</u></a></p>
         </div>
 
     )

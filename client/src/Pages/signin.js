@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "../Components/Background/style.css";
 import SignInBtn from "../Components/Button/SignInBtn";
-import TextArea from "../Components/TextArea";
-import { Facebook, Title } from "../Components/SignIn/sign-in";
+// import TextArea from "../Components/TextArea";
+import { Title } from "../Components/SignIn/sign-in";
 import PasswordTextArea from "../Components/PasswordTextArea";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -57,17 +57,17 @@ class Signin extends Component {
             <>
                 <Title>
                     Sign In
-                </Title>
-                <TextArea
+            </Title>
+                <PasswordTextArea
                     placeholder="Email"
                     type="text"
                     id="email"
                     value={this.state.email}
                     onChange={this.handleInputChange}
                 >
-                </TextArea>
+                </PasswordTextArea>
                 <PasswordTextArea
-                    placeholder="Password must be 6 characters long"
+                    placeholder="Password"
                     type="password"
                     id="password"
                     value={this.state.password}
@@ -77,7 +77,6 @@ class Signin extends Component {
                     Sign In
                 </SignInBtn>
                 <p className="text-center pt-2">Don't have an account? <a className="" href="/signup"><u>Sign Up</u></a></p>
-                <Facebook>Sign in</Facebook>
             </>
         )
     }

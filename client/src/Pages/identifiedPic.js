@@ -62,7 +62,7 @@ class IdentifiedPic extends Component {
             <p className="d-flex justify-content-center mt-4"style={{fontSize: 20, color: "white", fontWeight: "bold"}}>
             IT'S A MATCH!<span  role="img" aria-label="beer">🍻</span>
             </p>
-            OBJECT GOES HERE
+            You took a picture of a {this.props.word}
             <p className="d-flex justify-content-center mt-4"style={{fontSize: 16, color: "white", opacity: ".3"}}>
             + 50 POINTS
             </p>

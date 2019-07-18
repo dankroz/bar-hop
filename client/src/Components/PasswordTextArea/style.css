@@ -1,20 +1,20 @@
 input {
-    border-radius: 35px;
-    height: 40px;
-    line-height: 35px;
-    width: 210px;
-    outline: 0px solid white;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 5px;
-    padding-bottom: 0px;
-    border: none;
-    -moz-box-sizing:content-box;
-    -webkit-box-sizing:content-box;
-    border:#fff solid .2px;
-    box-shadow:inset 0px 0px 8px rgba(0, 0, 0, 0.123);
+  border-radius: 35px;
+  height: 45px !important;
+  line-height: 35px;
+  width: 210px;
+  outline: 0px solid white;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border: #fff solid .2px;
+  padding-bottom: 8px;
 }
 
 ::placeholder { 
