@@ -102,7 +102,7 @@ class PicPage extends Component {
           if (item.value > .8 && item.value < 1 && (/^(water\ssports|beer|bar\stap|juke\sbox|neon|shot\sglass|jersey|wine|shotski|tv|television)$/.test(item.name))) {
             console.log("did this work")
             console.log(item.name);
-            this.props.parentMethod1();
+            
             return  this.props.history.push("/identified");
           } else {
             console.log("you failed at " + item.name)

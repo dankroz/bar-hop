@@ -54,9 +54,7 @@ class Home extends Component {
   logOut = () => {
     this.setState({logoutGear: true}) 
   }
-  changeGear = () => {
-    this.setState({logoutGear: false})
-  }
+  
 
   render() {
     return (
