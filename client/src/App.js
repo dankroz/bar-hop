@@ -14,6 +14,7 @@ import NoMatch from "./Pages/NoMatch";
 import Home from "./Pages/home";
 import IdentifiedPic from "./Pages/identifiedPic";
 import Welcome from "./Pages/welcome"
+import NoLocation from "./Pages/nolocation";
 //import API from "./Utils/API"
 //import ShopContext from "./context/shop-context";
 
@@ -281,6 +282,8 @@ class App extends Component {
         
   };
 
+
+  
 //   getLocation = () => { 
 //     navigator.geolocation.getCurrentPosition(function(position) {
 //         console.log("hello")
@@ -320,7 +323,8 @@ Loading = () => {
     }      
     // Default to Washington, DC
     else
-      console.log("No Geolocation")
+      console.log("No Geolocation");
+      
   }
 
 UserLocation = (position)  => {
@@ -354,6 +358,7 @@ NearestCity = (latitude, longitude) => {
     this.setState({
       ready: true
     });
+   
     this.removeBar()
 }
 
@@ -397,12 +402,13 @@ PythagorasEquirectangular = (lat1, lon1, lat2, lon2) => {
                 <Route exact path="/home" render={()=> <Home parentMethod={this.Loading} closestBar={this.state.closestBar} ready={this.state.ready} bars={this.state.bars}/>} />
                 <Route exact path="/signin" component={Signin} />
                 <Route exact path="/signup" component={SignUp} />
+                <Route exact path="/nolocation" component={NoLocation} />
                 <Route exact path="/map" render={()=> <Maps closestBar={this.state.closestBar} Userlong={this.state.Userlong} Userlat={this.state.Userlat}/>}/>
                 <Route exact path="/help" render={()=> <ExtraHelp closestBar={this.state.closestBar} />} />
                 <Route exact path="/arrived" render={()=> <Arrived closestBar={this.state.closestBar} />} />
                 <Route exact path="/bardetails" render={()=> <BarDetails closestBar={this.state.closestBar} />} />
                 <Route exact path="/picpage" render={()=> <PicPage parentMethod1={this.randomWords} array={this.state.array} word={this.state.word}/>} />
-                <Route exact path="/identified" component={IdentifiedPic} />
+                <Route exact path="/identified" render={()=> <IdentifiedPic word={this.state.word} />} />
                 <Route exact path="/leaderboard" component={Leaderboard} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route component={NoMatch} />
