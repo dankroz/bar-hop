@@ -278,6 +278,36 @@ class App extends Component {
       hours: "Mon-Fri 11am-2am",
       rating:"4.5",
       yelp: "https://www.yelp.com/biz/standard-tap-philadelphia"
+    }, 
+    {
+      name: "Ortlieb's",
+      latitude: 39.9634646,
+      longtitude: -75.1437828,
+      type: "bar",
+      hint1: "This divey watering hole used to be a staple brewery in Philly",
+      hint2: "Catch local bands who play music at this German type establishment",
+      image: "http://media.hiddencityphila.org/wp-content/uploads/2013/11/11201813/Ortliebsbar_5.jpg",
+      street:"847 N 3rd St",
+      cityZip:"Philadelphia, PA 19123",
+      googleMaps:"https://www.google.com/maps/dir//Ortlieb's,+847+N+3rd+St,+Philadelphia,+PA+19123/@39.9634646,-75.1437828,17z/data=!4m16!1m6!3m5!1s0x89c6c8652de0ade1:0xb105cafc7b428e5d!2sOrtlieb's!8m2!3d39.964522!4d-75.1423531!4m8!1m0!1m5!1m1!1s0x89c6c8652de0ade1:0xb105cafc7b428e5d!2m2!1d-75.142353!2d39.964522!3e3",
+      hours: "closed Monday, 2am",
+      rating:"4.4",
+      yelp: "https://www.yelp.com/biz/ortliebs-philadelphia"
+    }, 
+    {
+      name: "Yard's Brewing Company",
+      latitude: 39.9634646,
+      longtitude: -75.1437828,
+      type: "brewery",
+      hint1: "This is America we don't use meters, we use ....",
+      hint2: "One of the most popular Philly beers, be ready for a brawl after this one",
+      image: "https://lh5.googleusercontent.com/p/AF1QipNbfPY-7k5m6Ba2gaFCmZpcTpu3GP-lyatizWiE=w408-h271-k-no",
+      street:"500 Spring Garden St",
+      cityZip:"Philadelphia, PA 19123",
+      googleMaps:"https://www.google.com/maps/place/Yards+Brewing+Company/@39.9607591,-75.1450595,17z/data=!4m5!3m4!1s0x89c6c866915bd66b:0x7ca447b9c996647!8m2!3d39.9609711!4d-75.1469088",
+      hours: "11am - 11pm",
+      rating:"4.5",
+      yelp: "https://www.yelp.com/biz/yards-brewing-company-philadelphia-3"
     }
   ],
     Userlong: "",
