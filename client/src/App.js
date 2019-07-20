@@ -264,6 +264,21 @@ class App extends Component {
       rating:"4.0",
       yelp: "https://www.yelp.com/biz/bob-and-barbaras-philadelphia"
     },
+    {
+      name: "Standard Tap",
+      latitude: 39.964165,
+      longtitude: -75.140522,
+      type: "Standard Taproom",
+      hint1: "Great place for a post coding bootcamp graduation beer",
+      hint2: "If you couldn't get the first hint, lord help ya",
+      image: "https://lh5.googleusercontent.com/p/AF1QipP5GAJTKL-fGB9Z3nQOv4LK-8oOPjYBDWUqHOG1=w408-h306-k-no",
+      street:"901 N 2nd St",
+      cityZip:"Philadelphia, PA 19123",
+      googleMaps:"https://google.com/maps/place/Standard+Tap/@39.9641636,-75.1427099,17z/data=!3m1!4b1!4m5!3m4!1s0x89c6c86504bc8ecb:0xaead2659f4e312e6!8m2!3d39.9641636!4d-75.1405212",
+      hours: "Mon-Fri 11am-2am",
+      rating:"4.5",
+      yelp: "https://www.yelp.com/biz/standard-tap-philadelphia"
+    }
   ],
     Userlong: "",
     Userlat: "",
