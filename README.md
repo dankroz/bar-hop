@@ -10,3 +10,5 @@ Once arrived at the location, the user can attain more points by beating challen
 You can also checkout the leaderboard to see other users and how they've done. 
 
 Enjoy!
+
+# Link: https://bar--hop.herokuapp.com/
