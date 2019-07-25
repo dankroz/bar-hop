@@ -1,4 +1,4 @@
-# bar-hop
+# bar-hop - meant for mobile use so if on desktop you will need to change to mobile device mode via DevTools
 A scavenger hunt challenge app for adventurous people looking to have fun and find new bars.
 
 Users must sign up for an account to keep track of their score. We use Redux & Passport to manage the authentication. 
